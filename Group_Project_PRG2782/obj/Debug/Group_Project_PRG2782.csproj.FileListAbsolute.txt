@@ -1,0 +1,13 @@
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.exe.config
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.exe
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.pdb
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.AssemblyReference.cache
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.SuggestedBindingRedirects.cache
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Create_Account.resources
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.LoginDetails.resources
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Properties.Resources.resources
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.GenerateResource.cache
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.CoreCompileInputs.cache
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.exe
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.pdb
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.MainMenu.resources
