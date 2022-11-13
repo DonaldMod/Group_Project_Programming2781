@@ -32,6 +32,7 @@
             this.btnRead = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreate
@@ -70,6 +71,16 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(665, 373);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(114, 31);
+            this.btnTest.TabIndex = 4;
+            this.btnTest.Text = "Test Connection";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -77,6 +88,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnRead);
@@ -93,5 +105,6 @@
         private System.Windows.Forms.Button btnRead;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnTest;
     }
 }

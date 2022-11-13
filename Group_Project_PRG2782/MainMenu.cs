@@ -12,9 +12,15 @@ namespace Group_Project_PRG2782
 {
     public partial class MainMenu : Form
     {
+        DBConnection dB = new DBConnection();
         public MainMenu()
         {
             InitializeComponent();
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            dB.TestConnection();
         }
     }
 }

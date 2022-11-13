@@ -6,10 +6,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Group_Project_PRG2782
 {
-    internal class DBConnection
+    class DBConnection
     {
         //Data source
         private string filePath;
@@ -17,41 +18,15 @@ namespace Group_Project_PRG2782
         private string strcon()
         {
             string path = Environment.CurrentDirectory;
-            string newpath = Path.GetFullPath(Path.Combine(path, @"..\..\BCStudents.mdf"));
+            string newpath = Path.GetFullPath(Path.Combine(path, @"..\..\Resources\Database\BCStudentsDB.mdf"));
             return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + newpath + @";Integrated Security=True;Connect Timeout=30";
         }
         //SQL connection object
-        private SqlConnection Sqlcon;
+        public SqlConnection Sqlcon;
 
         public DBConnection()
         {
             Sqlcon = new SqlConnection(this.strcon());
-        }
-
-        public DBConnection(string fileP)
-        {
-            this.filePath = fileP;
-            fileP = extractDBLocation(fileP);
-            Sqlcon = new SqlConnection(this.strcon());
-        }
-
-        string extractDBLocation(string fileP)
-        {
-            int iLength = fileP.Length;
-
-            if (fileP.EndsWith(@"bin\Debug"))
-            {
-                fileP = fileP.Substring(0, iLength - 9);
-                iLength = fileP.Length;
-                fileP = fileP.Insert(iLength, @"BCStudents.mdf");
-            }
-            else
-            {
-                iLength = fileP.Length;
-                fileP = fileP.Insert(iLength, @"BCStudents.mdf");
-            }
-
-            return fileP;
         }
 
         public DataTable executeSqlCommand(string sqlCommand)
@@ -73,5 +48,28 @@ namespace Group_Project_PRG2782
             }
             return dtTable;
         }
+        public void TestConnection()
+        {
+            try
+            {
+                Sqlcon.Open();
+                if (Sqlcon.State == System.Data.ConnectionState.Open )
+                {
+                    MessageBox.Show("The connection is open");
+                }
+                else
+                {
+                    MessageBox.Show("Connection was not established");
+                }
+                Sqlcon.Close();
+            }
+            catch (Exception y)
+            {
+                MessageBox.Show(y.Message);
+            }
+        }
     }
 }
+
+
+
