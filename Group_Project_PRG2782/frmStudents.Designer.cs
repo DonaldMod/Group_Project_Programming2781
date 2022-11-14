@@ -38,27 +38,28 @@
             this.txbxAddress = new System.Windows.Forms.TextBox();
             this.txbxPhone = new System.Windows.Forms.TextBox();
             this.txbxNumber = new System.Windows.Forms.TextBox();
-            this.txbxNameSurname = new System.Windows.Forms.TextBox();
+            this.txbxName = new System.Windows.Forms.TextBox();
             this.lblModuleCodes = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.lblDOB = new System.Windows.Forms.Label();
             this.lblImage = new System.Windows.Forms.Label();
-            this.lblNameAndSurname = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.lblStudentNmbr = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.dgvOne = new System.Windows.Forms.DataGridView();
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txbxSurname = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.txbxImagePath = new System.Windows.Forms.TextBox();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.tbnBrowse = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.cbxGender = new System.Windows.Forms.ComboBox();
+            this.lbxModules = new System.Windows.Forms.ListBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.ofdImage = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOne)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,13 +148,13 @@
             this.txbxNumber.Size = new System.Drawing.Size(199, 20);
             this.txbxNumber.TabIndex = 30;
             // 
-            // txbxNameSurname
+            // txbxName
             // 
-            this.txbxNameSurname.Location = new System.Drawing.Point(901, 103);
-            this.txbxNameSurname.Margin = new System.Windows.Forms.Padding(2);
-            this.txbxNameSurname.Name = "txbxNameSurname";
-            this.txbxNameSurname.Size = new System.Drawing.Size(199, 20);
-            this.txbxNameSurname.TabIndex = 29;
+            this.txbxName.Location = new System.Drawing.Point(901, 103);
+            this.txbxName.Margin = new System.Windows.Forms.Padding(2);
+            this.txbxName.Name = "txbxName";
+            this.txbxName.Size = new System.Drawing.Size(199, 20);
+            this.txbxName.TabIndex = 29;
             // 
             // lblModuleCodes
             // 
@@ -215,15 +216,15 @@
             this.lblImage.TabIndex = 23;
             this.lblImage.Text = "Image";
             // 
-            // lblNameAndSurname
+            // lblName
             // 
-            this.lblNameAndSurname.AutoSize = true;
-            this.lblNameAndSurname.Location = new System.Drawing.Point(784, 105);
-            this.lblNameAndSurname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNameAndSurname.Name = "lblNameAndSurname";
-            this.lblNameAndSurname.Size = new System.Drawing.Size(101, 13);
-            this.lblNameAndSurname.TabIndex = 22;
-            this.lblNameAndSurname.Text = "Name and Surname";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(784, 105);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.TabIndex = 22;
+            this.lblName.Text = "Name";
             // 
             // lblStudentNmbr
             // 
@@ -274,37 +275,37 @@
             this.lblHeader.TabIndex = 38;
             this.lblHeader.Text = "Student Form";
             // 
-            // textBox1
+            // txbxSurname
             // 
-            this.textBox1.Location = new System.Drawing.Point(900, 139);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 40;
+            this.txbxSurname.Location = new System.Drawing.Point(900, 139);
+            this.txbxSurname.Margin = new System.Windows.Forms.Padding(2);
+            this.txbxSurname.Name = "txbxSurname";
+            this.txbxSurname.Size = new System.Drawing.Size(200, 20);
+            this.txbxSurname.TabIndex = 40;
             // 
-            // label1
+            // lblSurname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(784, 139);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Student Number";
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Location = new System.Drawing.Point(784, 139);
+            this.lblSurname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(84, 13);
+            this.lblSurname.TabIndex = 39;
+            this.lblSurname.Text = "Student Number";
             // 
-            // textBox2
+            // txbxImagePath
             // 
-            this.textBox2.Location = new System.Drawing.Point(900, 170);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 41;
+            this.txbxImagePath.Location = new System.Drawing.Point(900, 170);
+            this.txbxImagePath.Name = "txbxImagePath";
+            this.txbxImagePath.Size = new System.Drawing.Size(200, 20);
+            this.txbxImagePath.TabIndex = 41;
             // 
-            // dateTimePicker1
+            // dtpDOB
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(900, 238);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 42;
+            this.dtpDOB.Location = new System.Drawing.Point(900, 238);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(200, 20);
+            this.dtpDOB.TabIndex = 42;
             // 
             // tbnBrowse
             // 
@@ -315,21 +316,25 @@
             this.tbnBrowse.Text = "Browse";
             this.tbnBrowse.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbxGender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(900, 271);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 44;
+            this.cbxGender.FormattingEnabled = true;
+            this.cbxGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.cbxGender.Location = new System.Drawing.Point(900, 271);
+            this.cbxGender.Name = "cbxGender";
+            this.cbxGender.Size = new System.Drawing.Size(200, 21);
+            this.cbxGender.TabIndex = 44;
             // 
-            // listBox1
+            // lbxModules
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(900, 386);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(200, 95);
-            this.listBox1.TabIndex = 45;
+            this.lbxModules.FormattingEnabled = true;
+            this.lbxModules.Location = new System.Drawing.Point(900, 386);
+            this.lbxModules.Name = "lbxModules";
+            this.lbxModules.Size = new System.Drawing.Size(200, 95);
+            this.lbxModules.TabIndex = 45;
             // 
             // comboBox2
             // 
@@ -339,19 +344,25 @@
             this.comboBox2.Size = new System.Drawing.Size(200, 21);
             this.comboBox2.TabIndex = 46;
             // 
+            // ofdImage
+            // 
+            this.ofdImage.FileName = "SelectedImage";
+            this.ofdImage.Filter = "*.jpeg|*.png";
+            this.ofdImage.Title = "Select Image ";
+            // 
             // frmStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 557);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lbxModules);
+            this.Controls.Add(this.cbxGender);
             this.Controls.Add(this.tbnBrowse);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dtpDOB);
+            this.Controls.Add(this.txbxImagePath);
+            this.Controls.Add(this.txbxSurname);
+            this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.dgvOne);
@@ -359,14 +370,14 @@
             this.Controls.Add(this.txbxAddress);
             this.Controls.Add(this.txbxPhone);
             this.Controls.Add(this.txbxNumber);
-            this.Controls.Add(this.txbxNameSurname);
+            this.Controls.Add(this.txbxName);
             this.Controls.Add(this.lblModuleCodes);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.lblGender);
             this.Controls.Add(this.lblDOB);
             this.Controls.Add(this.lblImage);
-            this.Controls.Add(this.lblNameAndSurname);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblStudentNmbr);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.btnSearch);
@@ -396,26 +407,27 @@
         private System.Windows.Forms.TextBox txbxAddress;
         private System.Windows.Forms.TextBox txbxPhone;
         private System.Windows.Forms.TextBox txbxNumber;
-        private System.Windows.Forms.TextBox txbxNameSurname;
+        private System.Windows.Forms.TextBox txbxName;
         private System.Windows.Forms.Label lblModuleCodes;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.Label lblImage;
-        private System.Windows.Forms.Label lblNameAndSurname;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblStudentNmbr;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridView dgvOne;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Label lblHeader;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txbxSurname;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.TextBox txbxImagePath;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.Button tbnBrowse;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox cbxGender;
+        private System.Windows.Forms.ListBox lbxModules;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.OpenFileDialog ofdImage;
     }
 }
