@@ -1,0 +1,44 @@
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.exe.config
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.exe
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.pdb
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.AssemblyReference.cache
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.SuggestedBindingRedirects.cache
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Create_Account.resources
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.LoginDetails.resources
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Properties.Resources.resources
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.GenerateResource.cache
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.CoreCompileInputs.cache
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.exe
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.pdb
+C:\Users\Donald Modiba\Desktop\Belgium Campus\Bachelor of Information Technology\Assignments\PRG\272\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.MainMenu.resources
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Create_Account.resources
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.LoginDetails.resources
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.MainMenu.resources
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Properties.Resources.resources
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.exe
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.pdb
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.exe.config
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.exe
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.pdb
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.exe.config
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.exe
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.pdb
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.AssemblyReference.cache
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.SuggestedBindingRedirects.cache
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Create_Account.resources
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.LoginDetails.resources
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.MainMenu.resources
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Properties.Resources.resources
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.GenerateResource.cache
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.CoreCompileInputs.cache
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.exe
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.pdb
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Create_New_Module.resources
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Delete_Module.resources
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Read_Modules.resources
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Search_Module.resources
+C:\Users\Donald Modiba\Downloads\Group_Project_Programming2782-Database_Connection\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Update_Modules.resources
