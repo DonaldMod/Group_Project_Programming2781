@@ -12,7 +12,7 @@ namespace Group_Project_PRG2782
 {
     public partial class MainMenu : Form
     {
-        DBConnection dB = new DBConnection();
+        DataHandler dB = new DataHandler();
         public MainMenu()
         {
             InitializeComponent();
