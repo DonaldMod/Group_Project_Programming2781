@@ -12,10 +12,9 @@ namespace Group_Project_PRG2782
 {
     class DataHandler
     {
-        public SqlConnection Sqlcon;
         
 
-        private string strcon()
+        public string strcon()
         {
             string path = Environment.CurrentDirectory;
             string newpath = Path.GetFullPath(Path.Combine(path, @"..\..\Resources\Database\BCStudentsDB.mdf"));
@@ -25,7 +24,7 @@ namespace Group_Project_PRG2782
         
         public DataHandler()
         {
-            Sqlcon = new SqlConnection(this.strcon());
+            
         }
 
         public DataTable executeSqlCommand(string sqlCommand)
