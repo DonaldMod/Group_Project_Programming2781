@@ -17,6 +17,9 @@ namespace Group_Project_PRG2782
         StringBuilder sb = new StringBuilder();
         StudentCRUD cRUD = new StudentCRUD();
         MainMenu main = new MainMenu();
+        frmAddSubjects addSubjects = new frmAddSubjects();  
+
+        string imagePath;
         public frmStudents()
         {
             InitializeComponent();
@@ -32,7 +35,7 @@ namespace Group_Project_PRG2782
             try
             {
                 //Add image using byte and image path
-                byte[] image = File.ReadAllBytes($@"{txbxImagePath.Text}");
+                Image image= Image.FromFile(imagePath);
                 //Convert Listbox to string using stingbuilder 
                 foreach (var item in lbxModules.Items)
                 {
@@ -53,7 +56,11 @@ namespace Group_Project_PRG2782
 
         private void btnAddSubjects_Click(object sender, EventArgs e)
         {
-
+            addSubjects.ShowDialog();
+            foreach (var item in addSubjects.Modules)
+            {
+                lbxModules.Items.Add(item);
+            } 
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -73,7 +80,8 @@ namespace Group_Project_PRG2782
             {
                 if (ofdImage.ShowDialog()== DialogResult.OK)
                 {
-                    txbxImagePath.Text = ofdImage.FileName.ToString();
+                    imagePath = ofdImage.FileName.ToString();
+                    pictureBox1.Image = Image.FromFile(imagePath);
                 }
             }
             catch (Exception t)

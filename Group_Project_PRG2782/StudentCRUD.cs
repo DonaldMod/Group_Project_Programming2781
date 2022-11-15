@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Drawing;
 
 namespace Group_Project_PRG2782
 {
@@ -16,7 +17,7 @@ namespace Group_Project_PRG2782
         SqlConnection sqlConn;
 
 
-        public void UpdateStudents(int ID, string fname,string lname, byte[] image, DateTime DOB, string Gender, int phone, string Address, string Modules)
+        public void UpdateStudents(int ID, string fname,string lname, Image image, DateTime DOB, string Gender, int phone, string Address, string Modules)
         {
             using (sqlConn = new SqlConnection(data.strcon()))
             {

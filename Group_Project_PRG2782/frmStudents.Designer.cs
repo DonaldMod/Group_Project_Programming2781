@@ -53,7 +53,6 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.txbxSurname = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
-            this.txbxImagePath = new System.Windows.Forms.TextBox();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.tbnBrowse = new System.Windows.Forms.Button();
             this.cbxGender = new System.Windows.Forms.ComboBox();
@@ -61,7 +60,9 @@
             this.ofdImage = new System.Windows.Forms.OpenFileDialog();
             this.btnAddSubjects = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOne)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnViewCourse
@@ -128,7 +129,7 @@
             // 
             // txbxAddress
             // 
-            this.txbxAddress.Location = new System.Drawing.Point(901, 343);
+            this.txbxAddress.Location = new System.Drawing.Point(901, 371);
             this.txbxAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txbxAddress.Name = "txbxAddress";
             this.txbxAddress.Size = new System.Drawing.Size(199, 20);
@@ -136,7 +137,7 @@
             // 
             // txbxPhone
             // 
-            this.txbxPhone.Location = new System.Drawing.Point(901, 307);
+            this.txbxPhone.Location = new System.Drawing.Point(901, 335);
             this.txbxPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txbxPhone.Name = "txbxPhone";
             this.txbxPhone.Size = new System.Drawing.Size(199, 20);
@@ -144,7 +145,7 @@
             // 
             // txbxNumber
             // 
-            this.txbxNumber.Location = new System.Drawing.Point(901, 73);
+            this.txbxNumber.Location = new System.Drawing.Point(901, 8);
             this.txbxNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txbxNumber.Name = "txbxNumber";
             this.txbxNumber.Size = new System.Drawing.Size(199, 20);
@@ -152,7 +153,7 @@
             // 
             // txbxName
             // 
-            this.txbxName.Location = new System.Drawing.Point(901, 103);
+            this.txbxName.Location = new System.Drawing.Point(901, 38);
             this.txbxName.Margin = new System.Windows.Forms.Padding(2);
             this.txbxName.Name = "txbxName";
             this.txbxName.Size = new System.Drawing.Size(199, 20);
@@ -161,7 +162,7 @@
             // lblModuleCodes
             // 
             this.lblModuleCodes.AutoSize = true;
-            this.lblModuleCodes.Location = new System.Drawing.Point(784, 386);
+            this.lblModuleCodes.Location = new System.Drawing.Point(784, 414);
             this.lblModuleCodes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModuleCodes.Name = "lblModuleCodes";
             this.lblModuleCodes.Size = new System.Drawing.Size(75, 13);
@@ -171,7 +172,7 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(784, 348);
+            this.lblAddress.Location = new System.Drawing.Point(784, 376);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(45, 13);
@@ -181,7 +182,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(784, 310);
+            this.lblPhone.Location = new System.Drawing.Point(784, 338);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(38, 13);
@@ -191,7 +192,7 @@
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(784, 280);
+            this.lblGender.Location = new System.Drawing.Point(784, 308);
             this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(42, 13);
@@ -201,7 +202,7 @@
             // lblDOB
             // 
             this.lblDOB.AutoSize = true;
-            this.lblDOB.Location = new System.Drawing.Point(784, 238);
+            this.lblDOB.Location = new System.Drawing.Point(784, 266);
             this.lblDOB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(66, 13);
@@ -211,7 +212,7 @@
             // lblImage
             // 
             this.lblImage.AutoSize = true;
-            this.lblImage.Location = new System.Drawing.Point(784, 170);
+            this.lblImage.Location = new System.Drawing.Point(784, 105);
             this.lblImage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImage.Name = "lblImage";
             this.lblImage.Size = new System.Drawing.Size(36, 13);
@@ -221,7 +222,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(784, 105);
+            this.lblName.Location = new System.Drawing.Point(784, 40);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
@@ -231,7 +232,7 @@
             // lblStudentNmbr
             // 
             this.lblStudentNmbr.AutoSize = true;
-            this.lblStudentNmbr.Location = new System.Drawing.Point(784, 78);
+            this.lblStudentNmbr.Location = new System.Drawing.Point(784, 13);
             this.lblStudentNmbr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStudentNmbr.Name = "lblStudentNmbr";
             this.lblStudentNmbr.Size = new System.Drawing.Size(84, 13);
@@ -280,7 +281,7 @@
             // 
             // txbxSurname
             // 
-            this.txbxSurname.Location = new System.Drawing.Point(900, 139);
+            this.txbxSurname.Location = new System.Drawing.Point(900, 74);
             this.txbxSurname.Margin = new System.Windows.Forms.Padding(2);
             this.txbxSurname.Name = "txbxSurname";
             this.txbxSurname.Size = new System.Drawing.Size(200, 20);
@@ -289,31 +290,23 @@
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(784, 139);
+            this.lblSurname.Location = new System.Drawing.Point(784, 74);
             this.lblSurname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(84, 13);
             this.lblSurname.TabIndex = 39;
             this.lblSurname.Text = "Student Number";
             // 
-            // txbxImagePath
-            // 
-            this.txbxImagePath.Location = new System.Drawing.Point(900, 170);
-            this.txbxImagePath.Name = "txbxImagePath";
-            this.txbxImagePath.Size = new System.Drawing.Size(200, 20);
-            this.txbxImagePath.TabIndex = 41;
-            this.txbxImagePath.TextChanged += new System.EventHandler(this.txbxImagePath_TextChanged);
-            // 
             // dtpDOB
             // 
-            this.dtpDOB.Location = new System.Drawing.Point(900, 238);
+            this.dtpDOB.Location = new System.Drawing.Point(900, 266);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(200, 20);
             this.dtpDOB.TabIndex = 42;
             // 
             // tbnBrowse
             // 
-            this.tbnBrowse.Location = new System.Drawing.Point(1009, 197);
+            this.tbnBrowse.Location = new System.Drawing.Point(1009, 227);
             this.tbnBrowse.Name = "tbnBrowse";
             this.tbnBrowse.Size = new System.Drawing.Size(91, 23);
             this.tbnBrowse.TabIndex = 43;
@@ -328,7 +321,7 @@
             "Male",
             "Female",
             "Other"});
-            this.cbxGender.Location = new System.Drawing.Point(900, 271);
+            this.cbxGender.Location = new System.Drawing.Point(900, 299);
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(200, 21);
             this.cbxGender.TabIndex = 44;
@@ -336,7 +329,7 @@
             // lbxModules
             // 
             this.lbxModules.FormattingEnabled = true;
-            this.lbxModules.Location = new System.Drawing.Point(900, 386);
+            this.lbxModules.Location = new System.Drawing.Point(900, 414);
             this.lbxModules.Name = "lbxModules";
             this.lbxModules.Size = new System.Drawing.Size(200, 95);
             this.lbxModules.TabIndex = 45;
@@ -349,7 +342,7 @@
             // 
             // btnAddSubjects
             // 
-            this.btnAddSubjects.Location = new System.Drawing.Point(1025, 492);
+            this.btnAddSubjects.Location = new System.Drawing.Point(1025, 520);
             this.btnAddSubjects.Name = "btnAddSubjects";
             this.btnAddSubjects.Size = new System.Drawing.Size(75, 23);
             this.btnAddSubjects.TabIndex = 46;
@@ -359,25 +352,33 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(784, 492);
+            this.btnClear.Location = new System.Drawing.Point(784, 520);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 47;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(900, 105);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 116);
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1210, 557);
+            this.ClientSize = new System.Drawing.Size(1263, 557);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAddSubjects);
             this.Controls.Add(this.lbxModules);
             this.Controls.Add(this.cbxGender);
             this.Controls.Add(this.tbnBrowse);
             this.Controls.Add(this.dtpDOB);
-            this.Controls.Add(this.txbxImagePath);
             this.Controls.Add(this.txbxSurname);
             this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblHeader);
@@ -407,6 +408,7 @@
             this.Text = "frmStudents";
             this.Load += new System.EventHandler(this.frmStudents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOne)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,7 +441,6 @@
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.TextBox txbxSurname;
         private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.TextBox txbxImagePath;
         private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.Button tbnBrowse;
         private System.Windows.Forms.ComboBox cbxGender;
@@ -447,5 +448,6 @@
         private System.Windows.Forms.OpenFileDialog ofdImage;
         private System.Windows.Forms.Button btnAddSubjects;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
