@@ -89,6 +89,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentCRUD.cs" />
     <EmbeddedResource Include="Create_Account.resx">
       <DependentUpon>Create_Account.cs</DependentUpon>
     </EmbeddedResource>

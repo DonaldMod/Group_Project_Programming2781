@@ -13,8 +13,7 @@ namespace Group_Project_PRG2782
     class DataHandler
     {
         public SqlConnection Sqlcon;
-        public string sqlString;
-        SqlCommand cmd;
+        
 
         private string strcon()
         {
@@ -66,20 +65,6 @@ namespace Group_Project_PRG2782
             catch (Exception y)
             {
                 MessageBox.Show(y.Message);
-            }
-        }
-        public void GetStudentsTable()
-        {
-            try
-            {
-                this.Sqlcon.Open();
-                sqlString = @"Select * from Students";
-
-            }
-            catch (Exception t)
-            {
-                MessageBox.Show(t.Message);
-                throw;
             }
         }
 
