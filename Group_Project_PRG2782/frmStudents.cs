@@ -61,5 +61,26 @@ namespace Group_Project_PRG2782
             this.Close();
             main.Show();
         }
+
+        private void txbxImagePath_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbnBrowse_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ofdImage.ShowDialog()== DialogResult.OK)
+                {
+                    txbxImagePath.Text = ofdImage.FileName.ToString();
+                }
+            }
+            catch (Exception t)
+            {
+
+                MessageBox.Show(t.Message);
+            }
+        }
     }
 }

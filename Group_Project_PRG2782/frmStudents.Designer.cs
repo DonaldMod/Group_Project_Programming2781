@@ -302,6 +302,7 @@
             this.txbxImagePath.Name = "txbxImagePath";
             this.txbxImagePath.Size = new System.Drawing.Size(200, 20);
             this.txbxImagePath.TabIndex = 41;
+            this.txbxImagePath.TextChanged += new System.EventHandler(this.txbxImagePath_TextChanged);
             // 
             // dtpDOB
             // 
@@ -318,6 +319,7 @@
             this.tbnBrowse.TabIndex = 43;
             this.tbnBrowse.Text = "Browse";
             this.tbnBrowse.UseVisualStyleBackColor = true;
+            this.tbnBrowse.Click += new System.EventHandler(this.tbnBrowse_Click);
             // 
             // cbxGender
             // 
