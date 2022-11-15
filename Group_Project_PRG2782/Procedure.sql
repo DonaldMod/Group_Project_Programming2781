@@ -1,4 +1,4 @@
-﻿USE BCStudentsDB
+﻿
 ALTER TABLE Students
 ALTER COLUMN Address VARCHAR(100)
 GO

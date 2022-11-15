@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Group_Project_PRG2782",
+    "\\Group_Project_PRG2782\\Resources",
+    "\\Group_Project_PRG2782\\Resources\\Database",
     "\\Group_Project_Programming2782-Database_Connection",
     "\\Group_Project_Programming2782-Database_Connection\\Group_Project_PRG2782"
   ],
-  "SelectedNode": "\\Group_Project_PRG2782\\StudentCRUD.cs",
+  "SelectedNode": "\\Group_Project_PRG2782\\Resources\\Database\\BCStudentsDB.mdf",
   "PreviewInSolutionExplorer": false
 }
