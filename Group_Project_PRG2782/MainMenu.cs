@@ -26,8 +26,8 @@ namespace Group_Project_PRG2782
 
         private void btnStudents_Click(object sender, EventArgs e)
         {
-            students.Show();
-            this.Hide();
+            students.ShowDialog();
+            
         }
     }
 }

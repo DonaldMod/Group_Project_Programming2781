@@ -13,8 +13,7 @@ namespace Group_Project_PRG2782
 {
     public partial class frmAddSubjects : Form
     {
-        AddModulesCRUD modulesCRUD = new AddModulesCRUD();
-        frmStudents students =  new frmStudents();
+        DataHandler data = new DataHandler();
         public List<string> Modules = new List<string>();
         public frmAddSubjects()
         {
@@ -23,15 +22,15 @@ namespace Group_Project_PRG2782
 
         private void frmAddSubjects_Load(object sender, EventArgs e)
         {
-            modulesCRUD.SelectModule();
-            dgvSubjects.DataSource = modulesCRUD.bs;
+            data.SelectModule();
+            dgvSubjects.DataSource = data.bs;
         }
 
         private void dgvSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                DbDataRecord record = modulesCRUD.bs.Current as DbDataRecord;
+                DbDataRecord record = data.bs.Current as DbDataRecord;
                 if (record != null)
                 {
                     lbxModules.Items.Add(record[0].ToString());
@@ -52,8 +51,7 @@ namespace Group_Project_PRG2782
             }
             catch (Exception t)
             {
-
-                throw;
+                MessageBox.Show(t.Message);
             }
         }
         public void SelectedModules()

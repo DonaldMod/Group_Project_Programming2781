@@ -7,12 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Group_Project_PRG2782
 {
     class DataHandler
     {
         SqlConnection Sqlcon;
+        SqlCommand cmd;
+        SqlDataAdapter adapter;
+        SqlDataReader reader;
+        public BindingSource bs = new BindingSource();
 
         public string strcon()
         {
@@ -48,9 +53,10 @@ namespace Group_Project_PRG2782
         }
         public void TestConnection()
         {
+            
             try
             {
-                Sqlcon.Open();
+                this.Sqlcon.Open();
                 if (Sqlcon.State == System.Data.ConnectionState.Open )
                 {
                     MessageBox.Show("The connection is open");
@@ -59,12 +65,68 @@ namespace Group_Project_PRG2782
                 {
                     MessageBox.Show("Connection was not established");
                 }
-                Sqlcon.Close();
+                
             }
             catch (Exception y)
             {
                 MessageBox.Show(y.Message);
             }
+            finally { Sqlcon.Close(); }
+        }
+        public void SelectModule()
+        {
+
+            string sqlstring = @"Select * from Modules";
+            this.Sqlcon.Open();
+            using (cmd = new SqlCommand(sqlstring, this.Sqlcon))
+            {
+                reader = cmd.ExecuteReader();
+                bs.DataSource = reader;
+            }
+            this.Sqlcon.Close();
+
+        }
+
+        public void UpdateStudents(int ID, string fname, string lname, byte[] image, DateTime DOB, string Gender, int phone, string Address, string Modules)
+        {
+            
+            using (Sqlcon)
+            {
+                try
+                {
+                    cmd = new SqlCommand("spInsertStudents", this.Sqlcon);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ID", ID);
+                    cmd.Parameters.AddWithValue("@FirstName", fname);
+                    cmd.Parameters.AddWithValue("@LastName", lname);
+                    cmd.Parameters.AddWithValue("@Image", image);
+                    cmd.Parameters.AddWithValue("@DOB", DOB);
+                    cmd.Parameters.AddWithValue("@Gender", Gender);
+                    cmd.Parameters.AddWithValue("@Phone", phone);
+                    cmd.Parameters.AddWithValue("@Address", Address);
+                    cmd.Parameters.AddWithValue("@MODULES", Modules);
+                    this.Sqlcon.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception t)
+                {
+                    MessageBox.Show(t.Message);
+
+                }
+                finally
+                {
+                    this.Sqlcon.Close();
+                }
+
+            }
+        }
+        public DataTable DisplayStudents()
+        {
+            adapter = new SqlDataAdapter("spDisplayStudents", this.Sqlcon);
+            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
         }
 
     }

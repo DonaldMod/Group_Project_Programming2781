@@ -15,8 +15,7 @@ namespace Group_Project_PRG2782
     {
         DataHandler data  = new DataHandler();
         StringBuilder sb = new StringBuilder();
-        StudentCRUD cRUD = new StudentCRUD();
-        MainMenu main = new MainMenu();
+        
         frmAddSubjects addSubjects = new frmAddSubjects();  
 
         string imagePath;
@@ -27,7 +26,8 @@ namespace Group_Project_PRG2782
 
         private void frmStudents_Load(object sender, EventArgs e)
         {
-
+            data.DisplayStudents();
+            dgvOne.DataSource = data.bs;
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace Group_Project_PRG2782
             try
             {
                 //Add image using byte and image path
-                Image image= Image.FromFile(imagePath);
+                byte[] image= File.ReadAllBytes(imagePath);
                 //Convert Listbox to string using stingbuilder 
                 foreach (var item in lbxModules.Items)
                 {
@@ -44,7 +44,7 @@ namespace Group_Project_PRG2782
                 //Save date
                 DateTime Dob = DateTime.Parse(dtpDOB.Text);
 
-                cRUD.UpdateStudents(int.Parse(txbxNumber.Text),txbxName.Text,txbxSurname.Text,image,Dob,cbxGender.Text,int.Parse(txbxPhone.Text),txbxAddress.Text,sb.ToString());
+                data.UpdateStudents(int.Parse(txbxNumber.Text),txbxName.Text,txbxSurname.Text,image,Dob,cbxGender.Text,int.Parse(txbxPhone.Text),txbxAddress.Text,sb.ToString());
                 
 
             }
@@ -52,6 +52,7 @@ namespace Group_Project_PRG2782
             {
                 MessageBox.Show(t.Message);
             }
+            data.bs.ResetBindings(false);
         }
 
         private void btnAddSubjects_Click(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace Group_Project_PRG2782
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            main.Show();
+            
         }
 
         private void txbxImagePath_TextChanged(object sender, EventArgs e)
@@ -89,6 +90,11 @@ namespace Group_Project_PRG2782
 
                 MessageBox.Show(t.Message);
             }
+        }
+
+        private void dgvOne_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

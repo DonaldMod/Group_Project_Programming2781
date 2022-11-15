@@ -259,6 +259,7 @@
             this.dgvOne.RowTemplate.Height = 24;
             this.dgvOne.Size = new System.Drawing.Size(669, 446);
             this.dgvOne.TabIndex = 36;
+            this.dgvOne.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOne_CellContentClick);
             // 
             // lblSearch
             // 
@@ -364,6 +365,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(900, 105);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 

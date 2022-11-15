@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddModulesCRUD.cs" />
+    <Compile Include="AddStudentsCRUD.cs" />
     <Compile Include="Create_Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,7 +96,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentCRUD.cs" />
     <EmbeddedResource Include="Create_Account.resx">
       <DependentUpon>Create_Account.cs</DependentUpon>
     </EmbeddedResource>

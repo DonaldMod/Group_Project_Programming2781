@@ -35,7 +35,7 @@ namespace Group_Project_PRG2782
 
                 sqlConn.Open();
                 cmd.ExecuteNonQuery();
-
+                sqlConn.Close();
             }
         }
         
