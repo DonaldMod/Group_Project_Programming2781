@@ -13,6 +13,7 @@ namespace Group_Project_PRG2782
     public partial class MainMenu : Form
     {
         DataHandler dB = new DataHandler();
+        frmStudents students= new frmStudents();
         public MainMenu()
         {
             InitializeComponent();
@@ -21,6 +22,11 @@ namespace Group_Project_PRG2782
         private void btnTest_Click(object sender, EventArgs e)
         {
             dB.TestConnection();
+        }
+
+        private void btnStudents_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

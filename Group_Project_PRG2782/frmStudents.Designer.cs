@@ -58,8 +58,9 @@
             this.tbnBrowse = new System.Windows.Forms.Button();
             this.cbxGender = new System.Windows.Forms.ComboBox();
             this.lbxModules = new System.Windows.Forms.ListBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.ofdImage = new System.Windows.Forms.OpenFileDialog();
+            this.btnAddSubjects = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOne)).BeginInit();
             this.SuspendLayout();
             // 
@@ -337,26 +338,37 @@
             this.lbxModules.Size = new System.Drawing.Size(200, 95);
             this.lbxModules.TabIndex = 45;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(901, 494);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 21);
-            this.comboBox2.TabIndex = 46;
-            // 
             // ofdImage
             // 
             this.ofdImage.FileName = "SelectedImage";
             this.ofdImage.Filter = "*.jpeg|*.png";
             this.ofdImage.Title = "Select Image ";
             // 
+            // btnAddSubjects
+            // 
+            this.btnAddSubjects.Location = new System.Drawing.Point(1025, 492);
+            this.btnAddSubjects.Name = "btnAddSubjects";
+            this.btnAddSubjects.Size = new System.Drawing.Size(75, 23);
+            this.btnAddSubjects.TabIndex = 46;
+            this.btnAddSubjects.Text = "Add Subject";
+            this.btnAddSubjects.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(784, 492);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 47;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
             // frmStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 557);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnAddSubjects);
             this.Controls.Add(this.lbxModules);
             this.Controls.Add(this.cbxGender);
             this.Controls.Add(this.tbnBrowse);
@@ -428,7 +440,8 @@
         private System.Windows.Forms.Button tbnBrowse;
         private System.Windows.Forms.ComboBox cbxGender;
         private System.Windows.Forms.ListBox lbxModules;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.OpenFileDialog ofdImage;
+        private System.Windows.Forms.Button btnAddSubjects;
+        private System.Windows.Forms.Button btnClear;
     }
 }

@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnStudents = new System.Windows.Forms.Button();
             this.btnRead = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnCreate
+            // btnStudents
             // 
-            this.btnCreate.Location = new System.Drawing.Point(67, 87);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(144, 77);
-            this.btnCreate.TabIndex = 0;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnStudents.Location = new System.Drawing.Point(67, 87);
+            this.btnStudents.Name = "btnStudents";
+            this.btnStudents.Size = new System.Drawing.Size(144, 77);
+            this.btnStudents.TabIndex = 0;
+            this.btnStudents.Text = "Students Form";
+            this.btnStudents.UseVisualStyleBackColor = true;
+            this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
             // 
             // btnRead
             // 
@@ -92,7 +93,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnRead);
-            this.Controls.Add(this.btnCreate);
+            this.Controls.Add(this.btnStudents);
             this.Name = "MainMenu";
             this.Text = "MainMenu";
             this.ResumeLayout(false);
@@ -101,7 +102,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnStudents;
         private System.Windows.Forms.Button btnRead;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
