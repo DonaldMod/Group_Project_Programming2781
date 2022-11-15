@@ -99,6 +99,9 @@
     <EmbeddedResource Include="Create_Account.resx">
       <DependentUpon>Create_Account.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSubjects.resx">
+      <DependentUpon>frmAddSubjects.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
