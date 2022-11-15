@@ -25,3 +25,4 @@ C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project
 C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.exe
 C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.pdb
 C:\Users\User\source\repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.frmStudents.resources
+C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.frmAddSubjects.resources

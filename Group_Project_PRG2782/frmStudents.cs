@@ -16,6 +16,7 @@ namespace Group_Project_PRG2782
         DataHandler data  = new DataHandler();
         StringBuilder sb = new StringBuilder();
         StudentCRUD cRUD = new StudentCRUD();
+        MainMenu main = new MainMenu();
         public frmStudents()
         {
             InitializeComponent();
@@ -53,6 +54,12 @@ namespace Group_Project_PRG2782
         private void btnAddSubjects_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            main.Show();
         }
     }
 }

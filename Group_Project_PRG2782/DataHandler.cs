@@ -12,7 +12,7 @@ namespace Group_Project_PRG2782
 {
     class DataHandler
     {
-        
+        SqlConnection Sqlcon;
 
         public string strcon()
         {
@@ -24,7 +24,7 @@ namespace Group_Project_PRG2782
         
         public DataHandler()
         {
-            
+            this.Sqlcon= new SqlConnection(this.strcon());
         }
 
         public DataTable executeSqlCommand(string sqlCommand)
