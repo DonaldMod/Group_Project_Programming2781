@@ -49,5 +49,10 @@ namespace Group_Project_PRG2782
                 MessageBox.Show(t.Message);
             }
         }
+
+        private void btnAddSubjects_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

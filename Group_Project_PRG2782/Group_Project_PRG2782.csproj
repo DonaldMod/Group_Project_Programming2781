@@ -68,6 +68,12 @@
       <DependentUpon>Create_Account.cs</DependentUpon>
     </Compile>
     <Compile Include="DataHandler.cs" />
+    <Compile Include="frmAddSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSubjects.Designer.cs">
+      <DependentUpon>frmAddSubjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>

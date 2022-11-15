@@ -352,6 +352,7 @@
             this.btnAddSubjects.TabIndex = 46;
             this.btnAddSubjects.Text = "Add Subject";
             this.btnAddSubjects.UseVisualStyleBackColor = true;
+            this.btnAddSubjects.Click += new System.EventHandler(this.btnAddSubjects_Click);
             // 
             // btnClear
             // 
