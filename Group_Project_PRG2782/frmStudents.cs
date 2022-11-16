@@ -26,7 +26,8 @@ namespace Group_Project_PRG2782
 
         private void frmStudents_Load(object sender, EventArgs e)
         {
-            data.DisplayStudents();
+           
+            data.bs.DataSource = data.DisplayStudents();
             dgvOne.DataSource = data.bs;
         }
 
@@ -44,7 +45,8 @@ namespace Group_Project_PRG2782
                 //Save date
                 DateTime Dob = DateTime.Parse(dtpDOB.Text);
 
-                data.UpdateStudents(int.Parse(txbxNumber.Text),txbxName.Text,txbxSurname.Text,image,Dob,cbxGender.Text,int.Parse(txbxPhone.Text),txbxAddress.Text,sb.ToString());
+                data.InsertStudents(int.Parse(txbxNumber.Text),txbxName.Text,txbxSurname.Text,image,Dob,cbxGender.Text,int.Parse(txbxPhone.Text),txbxAddress.Text,sb.ToString());
+                
                 
 
             }
@@ -53,6 +55,7 @@ namespace Group_Project_PRG2782
                 MessageBox.Show(t.Message);
             }
             data.bs.ResetBindings(false);
+            dgvOne.DataSource = data.bs;
         }
 
         private void btnAddSubjects_Click(object sender, EventArgs e)
@@ -82,7 +85,7 @@ namespace Group_Project_PRG2782
                 if (ofdImage.ShowDialog()== DialogResult.OK)
                 {
                     imagePath = ofdImage.FileName.ToString();
-                    pictureBox1.Image = Image.FromFile(imagePath);
+                    pbxImage.Image = Image.FromFile(imagePath);
                 }
             }
             catch (Exception t)
@@ -95,6 +98,33 @@ namespace Group_Project_PRG2782
         private void dgvOne_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateStudent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Add image using byte and image path
+                byte[] image = File.ReadAllBytes(imagePath);
+                //Convert Listbox to string using stingbuilder 
+                foreach (var item in lbxModules.Items)
+                {
+                    sb.Append($"{item.ToString()},");
+                }
+                //Save date
+                DateTime Dob = DateTime.Parse(dtpDOB.Text);
+                data.UpdateStudents(int.Parse(txbxNumber.Text), txbxName.Text, txbxSurname.Text, image, Dob, cbxGender.Text, int.Parse(txbxPhone.Text), txbxAddress.Text, sb.ToString());
+            }
+            catch (Exception t)
+            {
+                MessageBox.Show(t.Message);
+              
+            }
         }
     }
 }

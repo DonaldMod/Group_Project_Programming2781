@@ -60,9 +60,9 @@
             this.ofdImage = new System.Windows.Forms.OpenFileDialog();
             this.btnAddSubjects = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOne)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // btnViewCourse
@@ -101,6 +101,7 @@
             this.btnUpdateStudent.TabIndex = 3;
             this.btnUpdateStudent.Text = "Update Student";
             this.btnUpdateStudent.UseVisualStyleBackColor = true;
+            this.btnUpdateStudent.Click += new System.EventHandler(this.btnUpdateStudent_Click);
             // 
             // btnDeleteStudent
             // 
@@ -110,6 +111,7 @@
             this.btnDeleteStudent.TabIndex = 4;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // btnSearch
             // 
@@ -294,9 +296,9 @@
             this.lblSurname.Location = new System.Drawing.Point(784, 74);
             this.lblSurname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(84, 13);
+            this.lblSurname.Size = new System.Drawing.Size(49, 13);
             this.lblSurname.TabIndex = 39;
-            this.lblSurname.Text = "Student Number";
+            this.lblSurname.Text = "Surname";
             // 
             // dtpDOB
             // 
@@ -360,21 +362,22 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pbxImage
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(900, 105);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
+            this.pbxImage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pbxImage.Location = new System.Drawing.Point(900, 105);
+            this.pbxImage.Name = "pbxImage";
+            this.pbxImage.Size = new System.Drawing.Size(200, 116);
+            this.pbxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbxImage.TabIndex = 48;
+            this.pbxImage.TabStop = false;
             // 
             // frmStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1263, 557);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbxImage);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAddSubjects);
             this.Controls.Add(this.lbxModules);
@@ -410,7 +413,7 @@
             this.Text = "frmStudents";
             this.Load += new System.EventHandler(this.frmStudents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOne)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,6 +453,6 @@
         private System.Windows.Forms.OpenFileDialog ofdImage;
         private System.Windows.Forms.Button btnAddSubjects;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxImage;
     }
 }

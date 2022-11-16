@@ -51,6 +51,7 @@ namespace Group_Project_PRG2782
             }
             return dtTable;
         }
+        
         public void TestConnection()
         {
             
@@ -73,28 +74,28 @@ namespace Group_Project_PRG2782
             }
             finally { Sqlcon.Close(); }
         }
+        
         public void SelectModule()
         {
 
             string sqlstring = @"Select * from Modules";
-            this.Sqlcon.Open();
-            using (cmd = new SqlCommand(sqlstring, this.Sqlcon))
+            Sqlcon.Open();
+            using (cmd = new SqlCommand(sqlstring, Sqlcon))
             {
                 reader = cmd.ExecuteReader();
                 bs.DataSource = reader;
             }
-            this.Sqlcon.Close();
+            Sqlcon.Close();
 
         }
 
-        public void UpdateStudents(int ID, string fname, string lname, byte[] image, DateTime DOB, string Gender, int phone, string Address, string Modules)
+        public void InsertStudents(int ID, string fname, string lname, byte[] image, DateTime DOB, string Gender, int phone, string Address, string Modules)
         {
-            
-            using (Sqlcon)
+            try
             {
-                try
+                using (Sqlcon = new SqlConnection(this.strcon()))
                 {
-                    cmd = new SqlCommand("spInsertStudents", this.Sqlcon);
+                    cmd = new SqlCommand("spInsertStudents", Sqlcon);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ID", ID);
                     cmd.Parameters.AddWithValue("@FirstName", fname);
@@ -105,28 +106,91 @@ namespace Group_Project_PRG2782
                     cmd.Parameters.AddWithValue("@Phone", phone);
                     cmd.Parameters.AddWithValue("@Address", Address);
                     cmd.Parameters.AddWithValue("@MODULES", Modules);
-                    this.Sqlcon.Open();
+                    Sqlcon.Open();
                     cmd.ExecuteNonQuery();
-                }
-                catch (Exception t)
-                {
-                    MessageBox.Show(t.Message);
+                    Sqlcon.Close();
+
+                    MessageBox.Show("Student has been Added");
 
                 }
-                finally
-                {
-                    this.Sqlcon.Close();
-                }
-
             }
+            catch (Exception t)
+            {
+
+                MessageBox.Show(t.Message);
+            }
+            
         }
+
         public DataTable DisplayStudents()
         {
-            adapter = new SqlDataAdapter("spDisplayStudents", this.Sqlcon);
-            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            return dt;
+            using (Sqlcon = new SqlConnection(strcon()))
+            {
+                cmd = new SqlCommand("spDisplayStudents", this.Sqlcon);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                Sqlcon.Open();
+                DataTable dt = new DataTable();
+                using (reader = cmd.ExecuteReader())
+                {
+                    dt.Load(reader);
+                    return dt;
+                }
+
+                
+                
+            }
+        }
+
+        public DataTable SelectStudent(int id)
+        {
+            DataTable dataTable= new DataTable();
+            using (Sqlcon = new SqlConnection(strcon()))
+            {
+                cmd = new SqlCommand("spSelectStudentID",Sqlcon);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ID",id);
+
+                Sqlcon.Open();
+                DataTable dt = new DataTable();
+                using (reader = cmd.ExecuteReader())
+                {
+                    dt.Load(reader);
+                    return dt;
+                }
+            }
+        }
+
+        public void UpdateStudents(int ID, string fname, string lname, byte[] image, DateTime DOB, string Gender, int phone, string Address, string Modules)
+        {
+            try
+            {
+                using (Sqlcon = new SqlConnection(this.strcon()))
+                {
+                    cmd = new SqlCommand("spUpdateStudents", Sqlcon);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ID", ID);
+                    cmd.Parameters.AddWithValue("@FirstName", fname);
+                    cmd.Parameters.AddWithValue("@LastName", lname);
+                    cmd.Parameters.AddWithValue("@Image", image);
+                    cmd.Parameters.AddWithValue("@DOB", DOB);
+                    cmd.Parameters.AddWithValue("@Gender", Gender);
+                    cmd.Parameters.AddWithValue("@Phone", phone);
+                    cmd.Parameters.AddWithValue("@Address", Address);
+                    cmd.Parameters.AddWithValue("@MODULES", Modules);
+                    Sqlcon.Open();
+                    cmd.ExecuteNonQuery();
+                    Sqlcon.Close();
+
+                    MessageBox.Show("Student has been Updated");
+
+                }
+            }
+            catch (Exception t)
+            {
+
+                MessageBox.Show(t.Message);
+            }
         }
 
     }
