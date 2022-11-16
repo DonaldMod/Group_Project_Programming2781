@@ -128,22 +128,44 @@ namespace Group_Project_PRG2782
             }
         }
 
-        public DataTable SelectStudent(int id)
+        public DataTable searchStudent(int id)
         {
-            DataTable dataTable= new DataTable();
             using (Sqlcon = new SqlConnection(strcon()))
             {
-                cmd = new SqlCommand("spSelectStudentID",Sqlcon);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ID",id);
+
+                SqlCommand cmnd = new SqlCommand("spSearchStudent", Sqlcon);
+                cmnd.CommandType = CommandType.StoredProcedure;
+
+                cmnd.Parameters.AddWithValue("@Id", id);
 
                 Sqlcon.Open();
                 DataTable dt = new DataTable();
-                using (reader = cmd.ExecuteReader())
+
+                using (SqlDataReader dr = cmnd.ExecuteReader())
                 {
-                    dt.Load(reader);
+                    dt.Load(dr);
                     return dt;
                 }
+
+
+            }
+
+        }
+
+        public void deleteStudent(int id)
+        {
+            using (Sqlcon = new SqlConnection(strcon()))
+            {
+                SqlCommand cmnd = new SqlCommand("spDeleteStudent", Sqlcon);
+                cmnd.CommandType = CommandType.StoredProcedure;
+
+                cmnd.Parameters.AddWithValue("@Id", id);
+
+                Sqlcon.Open();
+                cmnd.ExecuteNonQuery();
+
+
+
             }
         }
 
@@ -179,17 +201,25 @@ namespace Group_Project_PRG2782
             }
         }
         //Module Methods
-        public void SelectModule()
+        public DataTable DisplayModule()
         {
 
-            string sqlstring = @"Select * from Modules";
-            Sqlcon.Open();
-            using (cmd = new SqlCommand(sqlstring, Sqlcon))
+            using (Sqlcon = new SqlConnection(strcon()))
             {
-                reader = cmd.ExecuteReader();
-                bs.DataSource = reader;
+                cmd = new SqlCommand("spDisplayModules", this.Sqlcon);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                Sqlcon.Open();
+                DataTable dt = new DataTable();
+                using (reader = cmd.ExecuteReader())
+                {
+                    dt.Load(reader);
+                    return dt;
+                }
+
+
+
             }
-            Sqlcon.Close();
 
         }
 
@@ -200,10 +230,11 @@ namespace Group_Project_PRG2782
                 using (Sqlcon = new SqlConnection(this.strcon()))
                 {
                     cmd = new SqlCommand("spInsertModule",Sqlcon);
-                    cmd.Parameters.AddWithValue("@Code",code);
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ModuleName", name);
                     cmd.Parameters.AddWithValue("@Description", Description);
                     cmd.Parameters.AddWithValue("@Resources", resources);
+                    cmd.Parameters.AddWithValue("@Code", code);
 
                     Sqlcon.Open();
                     cmd.ExecuteNonQuery();
@@ -224,6 +255,7 @@ namespace Group_Project_PRG2782
                 using (Sqlcon = new SqlConnection(this.strcon()))
                 {
                     cmd = new SqlCommand("spUpdateModule", Sqlcon);
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Code", code);
                     cmd.Parameters.AddWithValue("@ModuleName", name);
                     cmd.Parameters.AddWithValue("@Description", Description);
@@ -248,6 +280,7 @@ namespace Group_Project_PRG2782
                 using (Sqlcon = new SqlConnection(this.strcon()))
                 {
                     cmd = new SqlCommand("spDeleteModule", Sqlcon);
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Code", code);
                     
 
@@ -270,6 +303,7 @@ namespace Group_Project_PRG2782
                 using (Sqlcon = new SqlConnection(this.strcon()))
                 {
                     cmd = new SqlCommand("spSelectModule", Sqlcon);
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Code", code);
 
 

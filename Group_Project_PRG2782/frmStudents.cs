@@ -26,9 +26,8 @@ namespace Group_Project_PRG2782
 
         private void frmStudents_Load(object sender, EventArgs e)
         {
-           
-            data.bs.DataSource = data.DisplayStudents();
-            dgvOne.DataSource = data.bs;
+
+            loaddgv();
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
@@ -54,8 +53,7 @@ namespace Group_Project_PRG2782
             {
                 MessageBox.Show(t.Message);
             }
-            data.bs.ResetBindings(false);
-            dgvOne.DataSource = data.bs;
+            loaddgv();
         }
 
         private void btnAddSubjects_Click(object sender, EventArgs e)
@@ -102,7 +100,8 @@ namespace Group_Project_PRG2782
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
-
+            data.deleteStudent(int.Parse(txbxNumber.Text));
+            loaddgv();
         }
 
         private void btnUpdateStudent_Click(object sender, EventArgs e)
@@ -125,6 +124,18 @@ namespace Group_Project_PRG2782
                 MessageBox.Show(t.Message);
               
             }
+            loaddgv();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            dgvOne.DataSource =  data.searchStudent(int.Parse(tbxSearch.Text));
+            
+        }
+        public void loaddgv()
+        {
+            data.bs.DataSource = data.DisplayStudents();
+            dgvOne.DataSource = data.bs;
         }
     }
 }

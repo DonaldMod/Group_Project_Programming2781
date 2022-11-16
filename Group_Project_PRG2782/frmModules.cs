@@ -32,7 +32,7 @@ namespace Group_Project_PRG2782
 
         private void frmModules_Load(object sender, EventArgs e)
         {
-
+            loaddgv();
         }
 
         private void btnUpdateCourse_Click(object sender, EventArgs e)
@@ -64,11 +64,32 @@ namespace Group_Project_PRG2782
             {
                 MessageBox.Show(exc.Message);
             }
+            loaddgv();
         }
 
         private void btnView_Click(object sender, EventArgs e)
         {
+            try
+            {
+                code = tbxSearch.Text;
 
+                if (!(String.IsNullOrEmpty(code)))
+                {
+                    data.SelectModule(code);
+
+
+                    tbxSearch.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill in all empty spaces!!");
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            loaddgv();
         }
 
         private void btnAddCourse_Click(object sender, EventArgs e)
@@ -76,24 +97,13 @@ namespace Group_Project_PRG2782
             
             try
             {
-                code = txbxCode.Text;
-                name = txbxName.Text;
-                desc = rtxDescription.Text;
-                link = rtxDescription.Text;
-
-                if (!(String.IsNullOrEmpty(code)) || !(String.IsNullOrEmpty(name)) || !(String.IsNullOrEmpty(desc)))
-                {
-                    data.InsertModule(code, name, desc, link);
+                
+                    data.InsertModule(txbxCode.Text, txbxName.Text, rtxDescription.Text, rtxDescription.Text);
 
                     txbxCode.Clear();
                     txbxName.Clear();
                     rtbResources.Clear();
                     rtxDescription.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Please fill in all empty spaces!!");
-                }
 
 
             }
@@ -101,6 +111,7 @@ namespace Group_Project_PRG2782
             {
                 MessageBox.Show(exc.Message);
             }
+            loaddgv();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -132,6 +143,12 @@ namespace Group_Project_PRG2782
             {
                 MessageBox.Show(exc.Message);
             }
+            loaddgv();
+        }
+        public void loaddgv()
+        {
+            data.bs.DataSource = data.DisplayModule();
+            dgvModules.DataSource = data.bs;
         }
     }
 }

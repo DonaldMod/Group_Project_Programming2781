@@ -22,8 +22,7 @@ namespace Group_Project_PRG2782
 
         private void frmAddSubjects_Load(object sender, EventArgs e)
         {
-            data.SelectModule();
-            dgvSubjects.DataSource = data.bs;
+            loaddgv();
         }
 
         private void dgvSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -61,6 +60,11 @@ namespace Group_Project_PRG2782
                 Modules.Add(item.ToString());
             }
            
+        }
+        public void loaddgv()
+        {
+            data.bs.DataSource = data.DisplayModule();
+            dgvSubjects.DataSource = data.bs;
         }
     }
 }

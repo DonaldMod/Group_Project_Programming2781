@@ -14,6 +14,7 @@ namespace Group_Project_PRG2782
     {
         DataHandler dB = new DataHandler();
         frmStudents students= new frmStudents();
+        frmModules modules= new frmModules();
         public MainMenu()
         {
             InitializeComponent();
@@ -28,6 +29,21 @@ namespace Group_Project_PRG2782
         {
             students.ShowDialog();
             
+        }
+
+        private void btnModules_Click(object sender, EventArgs e)
+        {
+            modules.ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
