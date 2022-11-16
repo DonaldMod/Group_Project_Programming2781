@@ -44,7 +44,6 @@
             this.btnView = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
             this.tbxSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModules)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,15 +189,6 @@
             this.tbxSearch.Size = new System.Drawing.Size(240, 20);
             this.tbxSearch.TabIndex = 43;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(539, 56);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(89, 24);
-            this.btnSearch.TabIndex = 42;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
             // frmModules
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,7 +196,6 @@
             this.ClientSize = new System.Drawing.Size(1005, 498);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.tbxSearch);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDeleteCoure);
             this.Controls.Add(this.btnUpdateCourse);
@@ -248,6 +237,5 @@
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox tbxSearch;
-        private System.Windows.Forms.Button btnSearch;
     }
 }

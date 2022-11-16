@@ -29,48 +29,30 @@
         private void InitializeComponent()
         {
             this.btnStudents = new System.Windows.Forms.Button();
-            this.btnRead = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnModules = new System.Windows.Forms.Button();
             this.btnTest = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStudents
             // 
             this.btnStudents.Location = new System.Drawing.Point(67, 87);
             this.btnStudents.Name = "btnStudents";
-            this.btnStudents.Size = new System.Drawing.Size(144, 77);
+            this.btnStudents.Size = new System.Drawing.Size(210, 77);
             this.btnStudents.TabIndex = 0;
             this.btnStudents.Text = "Students Form";
             this.btnStudents.UseVisualStyleBackColor = true;
             this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
             // 
-            // btnRead
+            // btnModules
             // 
-            this.btnRead.Location = new System.Drawing.Point(253, 87);
-            this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(144, 77);
-            this.btnRead.TabIndex = 1;
-            this.btnRead.Text = "Read";
-            this.btnRead.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(429, 87);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(144, 77);
-            this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(599, 87);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(144, 77);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnModules.Location = new System.Drawing.Point(67, 192);
+            this.btnModules.Name = "btnModules";
+            this.btnModules.Size = new System.Drawing.Size(210, 77);
+            this.btnModules.TabIndex = 1;
+            this.btnModules.Text = "Modules Form";
+            this.btnModules.UseVisualStyleBackColor = true;
+            this.btnModules.Click += new System.EventHandler(this.btnModules_Click);
             // 
             // btnTest
             // 
@@ -82,6 +64,16 @@
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(67, 373);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(114, 31);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -89,13 +81,13 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnTest);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnRead);
+            this.Controls.Add(this.btnModules);
             this.Controls.Add(this.btnStudents);
             this.Name = "MainMenu";
             this.Text = "MainMenu";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
 
         }
@@ -103,9 +95,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnStudents;
-        private System.Windows.Forms.Button btnRead;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnModules;
         private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.Button btnExit;
     }
 }
