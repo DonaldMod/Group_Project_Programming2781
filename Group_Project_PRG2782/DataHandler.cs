@@ -31,7 +31,7 @@ namespace Group_Project_PRG2782
         {
             this.Sqlcon= new SqlConnection(this.strcon());
         }
-
+        //Student Methods
         public DataTable executeSqlCommand(string sqlCommand)
         {
             DataTable dtTable = new DataTable();
@@ -73,20 +73,6 @@ namespace Group_Project_PRG2782
                 MessageBox.Show(y.Message);
             }
             finally { Sqlcon.Close(); }
-        }
-        
-        public void SelectModule()
-        {
-
-            string sqlstring = @"Select * from Modules";
-            Sqlcon.Open();
-            using (cmd = new SqlCommand(sqlstring, Sqlcon))
-            {
-                reader = cmd.ExecuteReader();
-                bs.DataSource = reader;
-            }
-            Sqlcon.Close();
-
         }
 
         public void InsertStudents(int ID, string fname, string lname, byte[] image, DateTime DOB, string Gender, int phone, string Address, string Modules)
@@ -184,6 +170,112 @@ namespace Group_Project_PRG2782
 
                     MessageBox.Show("Student has been Updated");
 
+                }
+            }
+            catch (Exception t)
+            {
+
+                MessageBox.Show(t.Message);
+            }
+        }
+        //Module Methods
+        public void SelectModule()
+        {
+
+            string sqlstring = @"Select * from Modules";
+            Sqlcon.Open();
+            using (cmd = new SqlCommand(sqlstring, Sqlcon))
+            {
+                reader = cmd.ExecuteReader();
+                bs.DataSource = reader;
+            }
+            Sqlcon.Close();
+
+        }
+
+        public void InsertModule(string code, string name, string Description, string resources)
+        {
+            try
+            {
+                using (Sqlcon = new SqlConnection(this.strcon()))
+                {
+                    cmd = new SqlCommand("spInsertModule",Sqlcon);
+                    cmd.Parameters.AddWithValue("@Code",code);
+                    cmd.Parameters.AddWithValue("@ModuleName", name);
+                    cmd.Parameters.AddWithValue("@Description", Description);
+                    cmd.Parameters.AddWithValue("@Resources", resources);
+
+                    Sqlcon.Open();
+                    cmd.ExecuteNonQuery();
+                    Sqlcon.Close();
+                }
+            }
+            catch (Exception t)
+            {
+
+                MessageBox.Show(t.Message);
+            }
+        }
+
+        public void UpdateModule(string code, string name, string Description, string resources)
+        {
+            try
+            {
+                using (Sqlcon = new SqlConnection(this.strcon()))
+                {
+                    cmd = new SqlCommand("spUpdateModule", Sqlcon);
+                    cmd.Parameters.AddWithValue("@Code", code);
+                    cmd.Parameters.AddWithValue("@ModuleName", name);
+                    cmd.Parameters.AddWithValue("@Description", Description);
+                    cmd.Parameters.AddWithValue("@Resources", resources);
+
+                    Sqlcon.Open();
+                    cmd.ExecuteNonQuery();
+                    Sqlcon.Close();
+                }
+            }
+            catch (Exception t)
+            {
+
+                MessageBox.Show(t.Message);
+            }
+        }
+
+        public void DeleteModule(string code)
+        {
+            try
+            {
+                using (Sqlcon = new SqlConnection(this.strcon()))
+                {
+                    cmd = new SqlCommand("spDeleteModule", Sqlcon);
+                    cmd.Parameters.AddWithValue("@Code", code);
+                    
+
+                    Sqlcon.Open();
+                    cmd.ExecuteNonQuery();
+                    Sqlcon.Close();
+                }
+            }
+            catch (Exception t)
+            {
+
+                MessageBox.Show(t.Message);
+            }
+        }
+
+        public void SelectModule(string code)
+        {
+            try
+            {
+                using (Sqlcon = new SqlConnection(this.strcon()))
+                {
+                    cmd = new SqlCommand("spSelectModule", Sqlcon);
+                    cmd.Parameters.AddWithValue("@Code", code);
+
+
+                    Sqlcon.Open();
+                    cmd.ExecuteNonQuery();
+                    Sqlcon.Close();
                 }
             }
             catch (Exception t)

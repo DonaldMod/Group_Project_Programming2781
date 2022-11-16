@@ -42,34 +42,37 @@
             this.btnUpdateCourse = new System.Windows.Forms.Button();
             this.btnAddCourse = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModules)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvModules
             // 
             this.dgvModules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvModules.Location = new System.Drawing.Point(120, 60);
+            this.dgvModules.Location = new System.Drawing.Point(120, 93);
             this.dgvModules.Name = "dgvModules";
             this.dgvModules.Size = new System.Drawing.Size(518, 381);
             this.dgvModules.TabIndex = 0;
             // 
             // txbxCode
             // 
-            this.txbxCode.Location = new System.Drawing.Point(734, 71);
+            this.txbxCode.Location = new System.Drawing.Point(734, 104);
             this.txbxCode.Name = "txbxCode";
             this.txbxCode.Size = new System.Drawing.Size(217, 20);
             this.txbxCode.TabIndex = 1;
             // 
             // txbxName
             // 
-            this.txbxName.Location = new System.Drawing.Point(734, 128);
+            this.txbxName.Location = new System.Drawing.Point(734, 161);
             this.txbxName.Name = "txbxName";
             this.txbxName.Size = new System.Drawing.Size(217, 20);
             this.txbxName.TabIndex = 2;
             // 
             // rtxDescription
             // 
-            this.rtxDescription.Location = new System.Drawing.Point(734, 193);
+            this.rtxDescription.Location = new System.Drawing.Point(734, 226);
             this.rtxDescription.Name = "rtxDescription";
             this.rtxDescription.Size = new System.Drawing.Size(217, 80);
             this.rtxDescription.TabIndex = 3;
@@ -78,7 +81,7 @@
             // 
             // rtbResources
             // 
-            this.rtbResources.Location = new System.Drawing.Point(734, 309);
+            this.rtbResources.Location = new System.Drawing.Point(734, 342);
             this.rtbResources.Name = "rtbResources";
             this.rtbResources.Size = new System.Drawing.Size(217, 80);
             this.rtbResources.TabIndex = 4;
@@ -87,7 +90,7 @@
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(644, 74);
+            this.lblCode.Location = new System.Drawing.Point(644, 107);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(70, 13);
             this.lblCode.TabIndex = 5;
@@ -96,7 +99,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(640, 135);
+            this.lblName.Location = new System.Drawing.Point(640, 168);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(73, 13);
             this.lblName.TabIndex = 6;
@@ -105,7 +108,7 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(654, 196);
+            this.lblDescription.Location = new System.Drawing.Point(654, 229);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(60, 13);
             this.lblDescription.TabIndex = 7;
@@ -114,7 +117,7 @@
             // lblResources
             // 
             this.lblResources.AutoSize = true;
-            this.lblResources.Location = new System.Drawing.Point(656, 309);
+            this.lblResources.Location = new System.Drawing.Point(656, 342);
             this.lblResources.Name = "lblResources";
             this.lblResources.Size = new System.Drawing.Size(58, 13);
             this.lblResources.TabIndex = 8;
@@ -123,7 +126,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(12, 355);
+            this.btnExit.Location = new System.Drawing.Point(12, 388);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 41);
             this.btnExit.TabIndex = 41;
@@ -133,25 +136,27 @@
             // 
             // btnDeleteCoure
             // 
-            this.btnDeleteCoure.Location = new System.Drawing.Point(12, 286);
+            this.btnDeleteCoure.Location = new System.Drawing.Point(12, 319);
             this.btnDeleteCoure.Name = "btnDeleteCoure";
             this.btnDeleteCoure.Size = new System.Drawing.Size(75, 41);
             this.btnDeleteCoure.TabIndex = 40;
             this.btnDeleteCoure.Text = "Delete Course";
             this.btnDeleteCoure.UseVisualStyleBackColor = true;
+            this.btnDeleteCoure.Click += new System.EventHandler(this.btnDeleteCoure_Click);
             // 
             // btnUpdateCourse
             // 
-            this.btnUpdateCourse.Location = new System.Drawing.Point(12, 209);
+            this.btnUpdateCourse.Location = new System.Drawing.Point(12, 242);
             this.btnUpdateCourse.Name = "btnUpdateCourse";
             this.btnUpdateCourse.Size = new System.Drawing.Size(75, 41);
             this.btnUpdateCourse.TabIndex = 39;
             this.btnUpdateCourse.Text = "Update Course";
             this.btnUpdateCourse.UseVisualStyleBackColor = true;
+            this.btnUpdateCourse.Click += new System.EventHandler(this.btnUpdateCourse_Click);
             // 
             // btnAddCourse
             // 
-            this.btnAddCourse.Location = new System.Drawing.Point(12, 135);
+            this.btnAddCourse.Location = new System.Drawing.Point(12, 168);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.Size = new System.Drawing.Size(75, 41);
             this.btnAddCourse.TabIndex = 38;
@@ -161,18 +166,47 @@
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(12, 60);
+            this.btnView.Location = new System.Drawing.Point(12, 93);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(75, 41);
             this.btnView.TabIndex = 37;
             this.btnView.Text = "View Course";
             this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(149, 67);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(107, 13);
+            this.lblSearch.TabIndex = 44;
+            this.lblSearch.Text = "Search Module Code";
+            // 
+            // tbxSearch
+            // 
+            this.tbxSearch.Location = new System.Drawing.Point(276, 60);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(240, 20);
+            this.tbxSearch.TabIndex = 43;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(539, 56);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(89, 24);
+            this.btnSearch.TabIndex = 42;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // frmModules
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 473);
+            this.ClientSize = new System.Drawing.Size(1005, 498);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.tbxSearch);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDeleteCoure);
             this.Controls.Add(this.btnUpdateCourse);
@@ -212,5 +246,8 @@
         private System.Windows.Forms.Button btnUpdateCourse;
         private System.Windows.Forms.Button btnAddCourse;
         private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
