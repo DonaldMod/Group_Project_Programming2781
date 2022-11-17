@@ -156,17 +156,12 @@ namespace Group_Project_PRG2782
         {
             try
             {
-                using (Sqlcon = new SqlConnection(this.strcon()))
+                using (Sqlcon = new SqlConnection(strcon()))
                 {
-                    SqlCommand cmnd = new SqlCommand("spDeleteStudent", this.Sqlcon);
-                    cmnd.CommandType = CommandType.StoredProcedure;
-                    cmnd.Parameters.AddWithValue("@ID",id);
-
-
+                    SqlCommand cmd = new SqlCommand("DELETE FROM Students WHERE StudentID = @ID", Sqlcon);
                     Sqlcon.Open();
-                    cmnd.ExecuteNonQuery();
-                    Sqlcon.Close(); ;
-
+                    cmd.Parameters.AddWithValue("@ID",id);
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception t)
@@ -183,7 +178,7 @@ namespace Group_Project_PRG2782
             {
                 using (Sqlcon = new SqlConnection(this.strcon()))
                 {
-                    SqlCommand cmnd = new SqlCommand("spDeleteStudent", this.Sqlcon);
+                    SqlCommand cmnd = new SqlCommand("spUpdateStudents", this.Sqlcon);
                     cmnd.CommandType = CommandType.StoredProcedure;
                     cmnd.Parameters.AddWithValue("@ID", ID);
                     cmnd.Parameters.AddWithValue("@FirstName", fname);
