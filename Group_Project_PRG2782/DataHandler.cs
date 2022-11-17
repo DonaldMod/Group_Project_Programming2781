@@ -17,11 +17,11 @@ namespace Group_Project_PRG2782
         SqlCommand cmd;
         SqlDataReader reader;
         public BindingSource bs = new BindingSource();
-
         public string strcon()
         {
-            string path = Environment.CurrentDirectory;
-            string newpath = Path.GetFullPath(Path.Combine(path, @"..\..\Resources\Database\BCStudentsDB.mdf"));
+            
+            string newpath = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory
+, @"..\..\Resources\Database\BCStudentsDB.mdf"));
             return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + newpath + @";Integrated Security=True;Connect Timeout=30";
         }
         //SQL connection object
@@ -78,21 +78,21 @@ namespace Group_Project_PRG2782
         {
             try
             {
-                using (Sqlcon = new SqlConnection(this.strcon()))
+                using (Sqlcon = new SqlConnection(strcon()))
                 {
-                    cmd = new SqlCommand("spInsertStudents", Sqlcon);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ID", ID);
-                    cmd.Parameters.AddWithValue("@FirstName", fname);
-                    cmd.Parameters.AddWithValue("@LastName", lname);
-                    cmd.Parameters.AddWithValue("@Image", image);
-                    cmd.Parameters.AddWithValue("@DOB", DOB);
-                    cmd.Parameters.AddWithValue("@Gender", Gender);
-                    cmd.Parameters.AddWithValue("@Phone", phone);
-                    cmd.Parameters.AddWithValue("@Address", Address);
-                    cmd.Parameters.AddWithValue("@MODULES", Modules);
+                    SqlCommand cmnd = new SqlCommand("spDeleteStudent", this.Sqlcon);
+                    cmnd.CommandType = CommandType.StoredProcedure;
+                    cmnd.Parameters.AddWithValue("@ID", ID);
+                    cmnd.Parameters.AddWithValue("@FirstName", fname);
+                    cmnd.Parameters.AddWithValue("@LastName", lname);
+                    cmnd.Parameters.AddWithValue("@Image", image);
+                    cmnd.Parameters.AddWithValue("@DOB", DOB);
+                    cmnd.Parameters.AddWithValue("@Gender", Gender);
+                    cmnd.Parameters.AddWithValue("@Phone", phone);
+                    cmnd.Parameters.AddWithValue("@Address", Address);
+                    cmnd.Parameters.AddWithValue("@MODULES", Modules);
                     Sqlcon.Open();
-                    cmd.ExecuteNonQuery();
+                    cmnd.ExecuteNonQuery();
                     Sqlcon.Close();
 
                     MessageBox.Show("Student has been Added");
@@ -111,12 +111,12 @@ namespace Group_Project_PRG2782
         {
             using (Sqlcon = new SqlConnection(strcon()))
             {
-                cmd = new SqlCommand("spDisplayStudents", this.Sqlcon);
-                cmd.CommandType = CommandType.StoredProcedure;
+                SqlCommand cmnd = new SqlCommand("spDisplayStudents", Sqlcon);
+                cmnd.CommandType = CommandType.StoredProcedure;
 
                 Sqlcon.Open();
                 DataTable dt = new DataTable();
-                using (reader = cmd.ExecuteReader())
+                using (reader = cmnd.ExecuteReader())
                 {
                     dt.Load(reader);
                     return dt;
@@ -132,8 +132,9 @@ namespace Group_Project_PRG2782
             using (Sqlcon = new SqlConnection(strcon()))
             {
 
-                SqlCommand cmnd = new SqlCommand("spSearchStudent", Sqlcon);
+                SqlCommand cmnd = new SqlCommand("spSelectStudentID", this.Sqlcon);
                 cmnd.CommandType = CommandType.StoredProcedure;
+
 
                 cmnd.Parameters.AddWithValue("@Id", id);
 
@@ -153,43 +154,48 @@ namespace Group_Project_PRG2782
 
         public void deleteStudent(int id)
         {
-            using (Sqlcon = new SqlConnection(strcon()))
-            {
-                SqlCommand cmnd = new SqlCommand("spDeleteStudent", Sqlcon);
-                cmnd.CommandType = CommandType.StoredProcedure;
-
-                cmnd.Parameters.AddWithValue("@Id", id);
-
-                Sqlcon.Open();
-                cmnd.ExecuteNonQuery();
-
-
-
-            }
-        }
-
-        public void UpdateStudents(int ID, string fname, string lname, byte[] image, DateTime DOB, string Gender, int phone, string Address, string Modules)
-        {
             try
             {
                 using (Sqlcon = new SqlConnection(this.strcon()))
                 {
-                    cmd = new SqlCommand("spUpdateStudents", Sqlcon);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ID", ID);
-                    cmd.Parameters.AddWithValue("@FirstName", fname);
-                    cmd.Parameters.AddWithValue("@LastName", lname);
-                    cmd.Parameters.AddWithValue("@Image", image);
-                    cmd.Parameters.AddWithValue("@DOB", DOB);
-                    cmd.Parameters.AddWithValue("@Gender", Gender);
-                    cmd.Parameters.AddWithValue("@Phone", phone);
-                    cmd.Parameters.AddWithValue("@Address", Address);
-                    cmd.Parameters.AddWithValue("@MODULES", Modules);
-                    Sqlcon.Open();
-                    cmd.ExecuteNonQuery();
-                    Sqlcon.Close();
+                    SqlCommand cmnd = new SqlCommand("spDeleteStudent", this.Sqlcon);
+                    cmnd.CommandType = CommandType.StoredProcedure;
+                    cmnd.Parameters.AddWithValue("@ID",id);
 
-                    MessageBox.Show("Student has been Updated");
+
+                    Sqlcon.Open();
+                    cmnd.ExecuteNonQuery();
+                    Sqlcon.Close(); ;
+
+                }
+            }
+            catch (Exception t)
+            {
+                MessageBox.Show(t.Message);
+            }
+            
+        }
+
+        public void UpdateStudents(int ID, string fname, string lname, DateTime DOB, string Gender, int phone, string Address, string Modules)
+        {
+            
+            try
+            {
+                using (Sqlcon = new SqlConnection(this.strcon()))
+                {
+                    SqlCommand cmnd = new SqlCommand("spDeleteStudent", this.Sqlcon);
+                    cmnd.CommandType = CommandType.StoredProcedure;
+                    cmnd.Parameters.AddWithValue("@ID", ID);
+                    cmnd.Parameters.AddWithValue("@FirstName", fname);
+                    cmnd.Parameters.AddWithValue("@LastName", lname);
+                    cmnd.Parameters.AddWithValue("@DOB", DOB);
+                    cmnd.Parameters.AddWithValue("@Gender", Gender);
+                    cmnd.Parameters.AddWithValue("@Phone", phone);
+                    cmnd.Parameters.AddWithValue("@Address", Address);
+                    cmnd.Parameters.AddWithValue("@MODULES", Modules);
+                    Sqlcon.Open();
+                    cmnd.ExecuteNonQuery();
+                    Sqlcon.Close();
 
                 }
             }
@@ -205,12 +211,12 @@ namespace Group_Project_PRG2782
 
             using (Sqlcon = new SqlConnection(strcon()))
             {
-                cmd = new SqlCommand("spDisplayModules", this.Sqlcon);
-                cmd.CommandType = CommandType.StoredProcedure;
+                SqlCommand cmnd = new SqlCommand("spDisplayModules", this.Sqlcon);
+                cmnd.CommandType = CommandType.StoredProcedure;
 
                 Sqlcon.Open();
                 DataTable dt = new DataTable();
-                using (reader = cmd.ExecuteReader())
+                using (reader = cmnd.ExecuteReader())
                 {
                     dt.Load(reader);
                     return dt;
@@ -228,15 +234,15 @@ namespace Group_Project_PRG2782
             {
                 using (Sqlcon = new SqlConnection(this.strcon()))
                 {
-                    cmd = new SqlCommand("spInsertModule",Sqlcon);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ModuleName", name);
-                    cmd.Parameters.AddWithValue("@Description", Description);
-                    cmd.Parameters.AddWithValue("@Resources", resources);
-                    cmd.Parameters.AddWithValue("@Code", code);
+                    SqlCommand cmnd = new SqlCommand("spInserModule", this.Sqlcon);
+                    cmnd.CommandType = CommandType.StoredProcedure;
+                    cmnd.Parameters.AddWithValue("@ModuleName", name);
+                    cmnd.Parameters.AddWithValue("@Description", Description);
+                    cmnd.Parameters.AddWithValue("@Resources", resources);
+                    cmnd.Parameters.AddWithValue("@Code", code);
 
                     Sqlcon.Open();
-                    cmd.ExecuteNonQuery();
+                    cmnd.ExecuteNonQuery();
                     Sqlcon.Close();
                 }
             }
@@ -253,15 +259,15 @@ namespace Group_Project_PRG2782
             {
                 using (Sqlcon = new SqlConnection(this.strcon()))
                 {
-                    cmd = new SqlCommand("spUpdateModule", Sqlcon);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Code", code);
-                    cmd.Parameters.AddWithValue("@ModuleName", name);
-                    cmd.Parameters.AddWithValue("@Description", Description);
-                    cmd.Parameters.AddWithValue("@Resources", resources);
+                    SqlCommand cmnd = new SqlCommand("spUpdateModule", this.Sqlcon);
+                    cmnd.CommandType = CommandType.StoredProcedure;
+                    cmnd.Parameters.AddWithValue("@Code", code);
+                    cmnd.Parameters.AddWithValue("@ModuleName", name);
+                    cmnd.Parameters.AddWithValue("@Description", Description);
+                    cmnd.Parameters.AddWithValue("@Resources", resources);
 
                     Sqlcon.Open();
-                    cmd.ExecuteNonQuery();
+                    cmnd.ExecuteNonQuery();
                     Sqlcon.Close();
                 }
             }
@@ -278,13 +284,13 @@ namespace Group_Project_PRG2782
             {
                 using (Sqlcon = new SqlConnection(this.strcon()))
                 {
-                    cmd = new SqlCommand("spDeleteModule", Sqlcon);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Code", code);
+                    SqlCommand cmnd = new SqlCommand("spDeleteModule", this.Sqlcon);
+                    cmnd.CommandType = CommandType.StoredProcedure;
+                    cmnd.Parameters.AddWithValue("@Code", code);
                     
 
                     Sqlcon.Open();
-                    cmd.ExecuteNonQuery();
+                    cmnd.ExecuteNonQuery();
                     Sqlcon.Close();
                 }
             }

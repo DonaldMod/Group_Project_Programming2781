@@ -100,16 +100,26 @@ namespace Group_Project_PRG2782
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
-            data.deleteStudent(int.Parse(txbxNumber.Text));
-            loaddgv();
+            try
+            {
+                data.deleteStudent(int.Parse(txbxNumber.Text));
+                loaddgv();
+            }
+            catch (Exception t)
+            {
+                MessageBox.Show(t.Message);
+                throw;
+            }
+            
         }
 
         private void btnUpdateStudent_Click(object sender, EventArgs e)
         {
+            
             try
             {
-                //Add image using byte and image path
-                byte[] image = File.ReadAllBytes(imagePath);
+                
+            
                 //Convert Listbox to string using stingbuilder 
                 foreach (var item in lbxModules.Items)
                 {
@@ -117,7 +127,7 @@ namespace Group_Project_PRG2782
                 }
                 //Save date
                 DateTime Dob = DateTime.Parse(dtpDOB.Text);
-                data.UpdateStudents(int.Parse(txbxNumber.Text), txbxName.Text, txbxSurname.Text, image, Dob, cbxGender.Text, int.Parse(txbxPhone.Text), txbxAddress.Text, sb.ToString());
+                data.UpdateStudents(int.Parse(txbxNumber.Text), txbxName.Text, txbxSurname.Text, Dob, cbxGender.Text, int.Parse(txbxPhone.Text), txbxAddress.Text, sb.ToString());  
             }
             catch (Exception t)
             {
@@ -140,16 +150,19 @@ namespace Group_Project_PRG2782
 
         private void dgvOne_SelectionChanged(object sender, EventArgs e)
         {
+            
             txbxNumber.Text = dgvOne.CurrentRow.Cells[0].Value.ToString();
             txbxName.Text = dgvOne.CurrentRow.Cells[1].Value.ToString();
             txbxSurname.Text = dgvOne.CurrentRow.Cells[2].Value.ToString();
             byte[] image = (byte[])(dgvOne.CurrentRow.Cells[3].Value);
             MemoryStream ms = new MemoryStream(image);
             pbxImage.Image = Image.FromStream(ms);
-            cbxGender.Text = dgvOne.CurrentRow.Cells[4].Value.ToString();
-            txbxPhone.Text = dgvOne.CurrentRow.Cells[5].Value.ToString();
-            txbxAddress.Text = dgvOne.CurrentRow.Cells[6].Value.ToString();
-            string[] modules = dgvOne.CurrentRow.Cells[7].Value.ToString().Split(',');
+            dtpDOB.Text = dgvOne.CurrentRow.Cells[4].Value.ToString();
+            cbxGender.Text = dgvOne.CurrentRow.Cells[5].Value.ToString();
+            txbxPhone.Text = dgvOne.CurrentRow.Cells[6].Value.ToString();
+            txbxAddress.Text = dgvOne.CurrentRow.Cells[7].Value.ToString();
+            lbxModules.Items.Clear();
+            string[] modules = dgvOne.CurrentRow.Cells[8].Value.ToString().Split(',');
             foreach (var item in modules)
             {
                 lbxModules.Items.Add(item);
@@ -157,6 +170,15 @@ namespace Group_Project_PRG2782
         }
 
         private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void btnViewStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Clear()
         {
             txbxAddress.Clear();
             txbxName.Clear();

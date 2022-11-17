@@ -27,3 +27,19 @@ C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project
 C:\Users\User\source\repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.frmStudents.resources
 C:\Users\User\Source\Repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.frmAddSubjects.resources
 C:\Users\User\source\repos\DonaldMod\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.frmModules.resources
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.AssemblyReference.cache
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.SuggestedBindingRedirects.cache
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Create_Account.resources
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.frmAddSubjects.resources
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.LoginDetails.resources
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.frmModules.resources
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.frmStudents.resources
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.MainMenu.resources
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.Properties.Resources.resources
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.GenerateResource.cache
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.csproj.CoreCompileInputs.cache
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.exe
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\obj\Debug\Group_Project_PRG2782.pdb
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.exe.config
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.exe
+D:\GitHub Code and Programs\Group_Project_Programming2782\Group_Project_PRG2782\bin\Debug\Group_Project_PRG2782.pdb

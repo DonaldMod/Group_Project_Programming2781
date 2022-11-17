@@ -39,7 +39,7 @@
             // 
             // lbxModules
             // 
-            this.lbxModules.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.lbxModules.BackColor = System.Drawing.SystemColors.MenuBar;
             this.lbxModules.FormattingEnabled = true;
             this.lbxModules.Location = new System.Drawing.Point(363, 53);
             this.lbxModules.Name = "lbxModules";

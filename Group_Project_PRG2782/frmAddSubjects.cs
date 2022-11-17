@@ -29,11 +29,7 @@ namespace Group_Project_PRG2782
         {
             try
             {
-                DbDataRecord record = data.bs.Current as DbDataRecord;
-                if (record != null)
-                {
-                    lbxModules.Items.Add(record[0].ToString());
-                }
+                lbxModules.Items.Add(dgvSubjects.CurrentRow.Cells[0].Value.ToString());
             }
             catch (Exception t)
             {
