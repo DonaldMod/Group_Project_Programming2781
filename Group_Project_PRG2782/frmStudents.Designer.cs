@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnViewCourse = new System.Windows.Forms.Button();
             this.btnViewStudent = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnUpdateStudent = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             this.lblImage = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblStudentNmbr = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.dgvOne = new System.Windows.Forms.DataGridView();
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblHeader = new System.Windows.Forms.Label();
@@ -63,60 +65,77 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnViewCourse
+            // 
+            this.btnViewCourse.BackColor = System.Drawing.Color.Yellow;
+            this.btnViewCourse.Location = new System.Drawing.Point(12, 77);
+            this.btnViewCourse.Name = "btnViewCourse";
+            this.btnViewCourse.Size = new System.Drawing.Size(75, 41);
+            this.btnViewCourse.TabIndex = 0;
+            this.btnViewCourse.Text = "View Course Details";
+            this.btnViewCourse.UseVisualStyleBackColor = false;
+            // 
             // btnViewStudent
             // 
-            this.btnViewStudent.Location = new System.Drawing.Point(12, 156);
+            this.btnViewStudent.BackColor = System.Drawing.Color.Yellow;
+            this.btnViewStudent.Location = new System.Drawing.Point(12, 143);
             this.btnViewStudent.Name = "btnViewStudent";
             this.btnViewStudent.Size = new System.Drawing.Size(75, 41);
             this.btnViewStudent.TabIndex = 1;
             this.btnViewStudent.Text = "View Student";
-            this.btnViewStudent.UseVisualStyleBackColor = true;
+            this.btnViewStudent.UseVisualStyleBackColor = false;
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(12, 238);
+            this.btnAddStudent.BackColor = System.Drawing.Color.Yellow;
+            this.btnAddStudent.Location = new System.Drawing.Point(12, 209);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(75, 41);
             this.btnAddStudent.TabIndex = 2;
             this.btnAddStudent.Text = "Add new Student";
-            this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.UseVisualStyleBackColor = false;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // btnUpdateStudent
             // 
-            this.btnUpdateStudent.Location = new System.Drawing.Point(12, 310);
+            this.btnUpdateStudent.BackColor = System.Drawing.Color.Yellow;
+            this.btnUpdateStudent.Location = new System.Drawing.Point(12, 279);
             this.btnUpdateStudent.Name = "btnUpdateStudent";
             this.btnUpdateStudent.Size = new System.Drawing.Size(75, 41);
             this.btnUpdateStudent.TabIndex = 3;
             this.btnUpdateStudent.Text = "Update Student";
-            this.btnUpdateStudent.UseVisualStyleBackColor = true;
+            this.btnUpdateStudent.UseVisualStyleBackColor = false;
             this.btnUpdateStudent.Click += new System.EventHandler(this.btnUpdateStudent_Click);
             // 
             // btnDeleteStudent
             // 
-            this.btnDeleteStudent.Location = new System.Drawing.Point(12, 398);
+            this.btnDeleteStudent.BackColor = System.Drawing.Color.Yellow;
+            this.btnDeleteStudent.Location = new System.Drawing.Point(12, 348);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(75, 41);
             this.btnDeleteStudent.TabIndex = 4;
             this.btnDeleteStudent.Text = "Delete Student";
-            this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.UseVisualStyleBackColor = false;
             this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(602, 44);
+            this.btnSearch.BackColor = System.Drawing.Color.Black;
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(635, 38);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(89, 24);
+            this.btnSearch.Size = new System.Drawing.Size(136, 35);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // tbxSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(263, 44);
+            this.tbxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxSearch.Location = new System.Drawing.Point(102, 40);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(293, 20);
+            this.tbxSearch.Size = new System.Drawing.Size(527, 29);
             this.tbxSearch.TabIndex = 6;
             // 
             // txbxAddress
@@ -154,6 +173,8 @@
             // lblModuleCodes
             // 
             this.lblModuleCodes.AutoSize = true;
+            this.lblModuleCodes.BackColor = System.Drawing.Color.Red;
+            this.lblModuleCodes.ForeColor = System.Drawing.Color.White;
             this.lblModuleCodes.Location = new System.Drawing.Point(784, 414);
             this.lblModuleCodes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModuleCodes.Name = "lblModuleCodes";
@@ -164,6 +185,8 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
+            this.lblAddress.BackColor = System.Drawing.Color.Red;
+            this.lblAddress.ForeColor = System.Drawing.Color.White;
             this.lblAddress.Location = new System.Drawing.Point(784, 376);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddress.Name = "lblAddress";
@@ -174,6 +197,8 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
+            this.lblPhone.BackColor = System.Drawing.Color.Red;
+            this.lblPhone.ForeColor = System.Drawing.Color.White;
             this.lblPhone.Location = new System.Drawing.Point(784, 338);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhone.Name = "lblPhone";
@@ -184,6 +209,8 @@
             // lblGender
             // 
             this.lblGender.AutoSize = true;
+            this.lblGender.BackColor = System.Drawing.Color.Red;
+            this.lblGender.ForeColor = System.Drawing.Color.White;
             this.lblGender.Location = new System.Drawing.Point(784, 308);
             this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGender.Name = "lblGender";
@@ -194,6 +221,8 @@
             // lblDOB
             // 
             this.lblDOB.AutoSize = true;
+            this.lblDOB.BackColor = System.Drawing.Color.Red;
+            this.lblDOB.ForeColor = System.Drawing.Color.White;
             this.lblDOB.Location = new System.Drawing.Point(784, 266);
             this.lblDOB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDOB.Name = "lblDOB";
@@ -204,6 +233,8 @@
             // lblImage
             // 
             this.lblImage.AutoSize = true;
+            this.lblImage.BackColor = System.Drawing.Color.Red;
+            this.lblImage.ForeColor = System.Drawing.Color.White;
             this.lblImage.Location = new System.Drawing.Point(784, 105);
             this.lblImage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImage.Name = "lblImage";
@@ -214,6 +245,8 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Red;
+            this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(784, 40);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
@@ -224,6 +257,8 @@
             // lblStudentNmbr
             // 
             this.lblStudentNmbr.AutoSize = true;
+            this.lblStudentNmbr.BackColor = System.Drawing.Color.Red;
+            this.lblStudentNmbr.ForeColor = System.Drawing.Color.White;
             this.lblStudentNmbr.Location = new System.Drawing.Point(784, 13);
             this.lblStudentNmbr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStudentNmbr.Name = "lblStudentNmbr";
@@ -231,8 +266,20 @@
             this.lblStudentNmbr.TabIndex = 21;
             this.lblStudentNmbr.Text = "Student Number";
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Yellow;
+            this.btnExit.Location = new System.Drawing.Point(12, 414);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 41);
+            this.btnExit.TabIndex = 35;
+            this.btnExit.Text = "Return To Menu";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // dgvOne
             // 
+            this.dgvOne.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
             this.dgvOne.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOne.Location = new System.Drawing.Point(102, 78);
             this.dgvOne.Margin = new System.Windows.Forms.Padding(2);
@@ -246,7 +293,9 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(161, 47);
+            this.lblSearch.BackColor = System.Drawing.Color.Red;
+            this.lblSearch.ForeColor = System.Drawing.Color.White;
+            this.lblSearch.Location = new System.Drawing.Point(323, 24);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(96, 13);
             this.lblSearch.TabIndex = 37;
@@ -255,7 +304,9 @@
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
+            this.lblHeader.BackColor = System.Drawing.Color.Red;
             this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.ForeColor = System.Drawing.Color.White;
             this.lblHeader.Location = new System.Drawing.Point(8, 9);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(124, 24);
@@ -273,6 +324,8 @@
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
+            this.lblSurname.BackColor = System.Drawing.Color.Red;
+            this.lblSurname.ForeColor = System.Drawing.Color.White;
             this.lblSurname.Location = new System.Drawing.Point(784, 74);
             this.lblSurname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSurname.Name = "lblSurname";
@@ -289,12 +342,14 @@
             // 
             // tbnBrowse
             // 
+            this.tbnBrowse.BackColor = System.Drawing.Color.Black;
+            this.tbnBrowse.ForeColor = System.Drawing.Color.White;
             this.tbnBrowse.Location = new System.Drawing.Point(1009, 227);
             this.tbnBrowse.Name = "tbnBrowse";
             this.tbnBrowse.Size = new System.Drawing.Size(91, 23);
             this.tbnBrowse.TabIndex = 43;
             this.tbnBrowse.Text = "Browse";
-            this.tbnBrowse.UseVisualStyleBackColor = true;
+            this.tbnBrowse.UseVisualStyleBackColor = false;
             this.tbnBrowse.Click += new System.EventHandler(this.tbnBrowse_Click);
             // 
             // cbxGender
@@ -325,22 +380,26 @@
             // 
             // btnAddSubjects
             // 
+            this.btnAddSubjects.BackColor = System.Drawing.Color.Black;
+            this.btnAddSubjects.ForeColor = System.Drawing.Color.White;
             this.btnAddSubjects.Location = new System.Drawing.Point(1025, 520);
             this.btnAddSubjects.Name = "btnAddSubjects";
             this.btnAddSubjects.Size = new System.Drawing.Size(75, 23);
             this.btnAddSubjects.TabIndex = 46;
             this.btnAddSubjects.Text = "Add Subject";
-            this.btnAddSubjects.UseVisualStyleBackColor = true;
+            this.btnAddSubjects.UseVisualStyleBackColor = false;
             this.btnAddSubjects.Click += new System.EventHandler(this.btnAddSubjects_Click);
             // 
             // btnClear
             // 
+            this.btnClear.BackColor = System.Drawing.Color.Black;
+            this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(784, 520);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 47;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
             // pbxImage
             // 
@@ -356,7 +415,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 557);
+            this.BackgroundImage = global::Group_Project_PRG2782.Properties.Resources.patternpad;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1263, 557);
             this.Controls.Add(this.pbxImage);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAddSubjects);
@@ -369,6 +430,7 @@
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.dgvOne);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txbxAddress);
             this.Controls.Add(this.txbxPhone);
             this.Controls.Add(this.txbxNumber);
@@ -387,7 +449,7 @@
             this.Controls.Add(this.btnUpdateStudent);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.btnViewStudent);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.btnViewCourse);
             this.Name = "frmStudents";
             this.Text = "frmStudents";
             this.Load += new System.EventHandler(this.frmStudents_Load);
@@ -399,6 +461,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnViewCourse;
         private System.Windows.Forms.Button btnViewStudent;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnUpdateStudent;
@@ -417,6 +481,7 @@
         private System.Windows.Forms.Label lblImage;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblStudentNmbr;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridView dgvOne;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Label lblHeader;
