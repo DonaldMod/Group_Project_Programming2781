@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Group_Project_PRG2782
 {
     public partial class MainMenu : Form
@@ -44,6 +45,27 @@ namespace Group_Project_PRG2782
         private void MainMenu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnStudents_MouseHover(object sender, EventArgs e)
+        {
+            btnStudents.BackColor = Color.Red;
+        }
+
+        private void btnStudents_MouseLeave(object sender, EventArgs e)
+        {
+            btnStudents.BackColor = Color.Black;
+        }
+
+        private void btnModules_MouseHover(object sender, EventArgs e)
+        {
+            btnStudents.BackColor = Color.Red;
+
+        }
+
+        private void btnModules_MouseLeave(object sender, EventArgs e)
+        {
+            btnStudents.BackColor = Color.Black;
         }
     }
 }

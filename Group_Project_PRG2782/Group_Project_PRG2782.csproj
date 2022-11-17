@@ -170,5 +170,17 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCResources\Resources\Back.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCResources\Resources\BC-Logo-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCResources\Resources\Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCResources\Resources\patternpad.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
