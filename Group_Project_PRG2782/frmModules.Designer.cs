@@ -54,6 +54,7 @@
             this.dgvModules.Name = "dgvModules";
             this.dgvModules.Size = new System.Drawing.Size(518, 381);
             this.dgvModules.TabIndex = 0;
+            this.dgvModules.SelectionChanged += new System.EventHandler(this.dgvModules_SelectionChanged);
             // 
             // txbxCode
             // 
@@ -133,7 +134,9 @@
             // 
             // btnDeleteCoure
             // 
-            this.btnDeleteCoure.BackColor = System.Drawing.Color.Yellow;
+            this.btnDeleteCoure.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDeleteCoure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteCoure.ForeColor = System.Drawing.Color.Yellow;
             this.btnDeleteCoure.Location = new System.Drawing.Point(26, 187);
             this.btnDeleteCoure.Name = "btnDeleteCoure";
             this.btnDeleteCoure.Size = new System.Drawing.Size(75, 41);
@@ -144,7 +147,9 @@
             // 
             // btnUpdateCourse
             // 
-            this.btnUpdateCourse.BackColor = System.Drawing.Color.Yellow;
+            this.btnUpdateCourse.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUpdateCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateCourse.ForeColor = System.Drawing.Color.Yellow;
             this.btnUpdateCourse.Location = new System.Drawing.Point(26, 140);
             this.btnUpdateCourse.Name = "btnUpdateCourse";
             this.btnUpdateCourse.Size = new System.Drawing.Size(75, 41);
@@ -155,7 +160,9 @@
             // 
             // btnAddCourse
             // 
-            this.btnAddCourse.BackColor = System.Drawing.Color.Yellow;
+            this.btnAddCourse.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCourse.ForeColor = System.Drawing.Color.Yellow;
             this.btnAddCourse.Location = new System.Drawing.Point(26, 93);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.Size = new System.Drawing.Size(75, 41);
@@ -167,6 +174,7 @@
             // btnView
             // 
             this.btnView.BackColor = System.Drawing.Color.Black;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.ForeColor = System.Drawing.Color.White;
             this.btnView.Location = new System.Drawing.Point(522, 41);
             this.btnView.Name = "btnView";

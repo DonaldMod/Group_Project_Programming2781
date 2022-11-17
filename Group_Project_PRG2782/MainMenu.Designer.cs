@@ -114,7 +114,7 @@
             this.PanelOptyions.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelOptyions.Location = new System.Drawing.Point(0, 0);
             this.PanelOptyions.Name = "PanelOptyions";
-            this.PanelOptyions.Size = new System.Drawing.Size(180, 553);
+            this.PanelOptyions.Size = new System.Drawing.Size(180, 592);
             this.PanelOptyions.TabIndex = 6;
             // 
             // pictureBox1
@@ -134,7 +134,7 @@
             this.PanelFrms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFrms.Location = new System.Drawing.Point(180, 0);
             this.PanelFrms.Name = "PanelFrms";
-            this.PanelFrms.Size = new System.Drawing.Size(1111, 553);
+            this.PanelFrms.Size = new System.Drawing.Size(1111, 592);
             this.PanelFrms.TabIndex = 7;
             // 
             // MainMenu
@@ -143,7 +143,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1291, 553);
+            this.ClientSize = new System.Drawing.Size(1291, 592);
             this.ControlBox = false;
             this.Controls.Add(this.PanelFrms);
             this.Controls.Add(this.PanelOptyions);
