@@ -78,13 +78,14 @@
             // 
             // btnCreateAccount
             // 
+            this.btnCreateAccount.BackColor = System.Drawing.Color.Yellow;
             this.btnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateAccount.Location = new System.Drawing.Point(252, 233);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(96, 50);
             this.btnCreateAccount.TabIndex = 8;
             this.btnCreateAccount.Text = "Create Account";
-            this.btnCreateAccount.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.UseVisualStyleBackColor = false;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // btnLogin
@@ -104,8 +105,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Group_Project_PRG2782.Properties.Resources.SystemLock;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImage = global::Group_Project_PRG2782.Properties.Resources.patternpad;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(524, 295);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnCreateAccount);

@@ -48,6 +48,7 @@
             // 
             // dgvModules
             // 
+            this.dgvModules.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
             this.dgvModules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvModules.Location = new System.Drawing.Point(120, 93);
             this.dgvModules.Name = "dgvModules";
@@ -88,7 +89,9 @@
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(644, 107);
+            this.lblCode.BackColor = System.Drawing.Color.Red;
+            this.lblCode.ForeColor = System.Drawing.Color.White;
+            this.lblCode.Location = new System.Drawing.Point(648, 107);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(70, 13);
             this.lblCode.TabIndex = 5;
@@ -97,7 +100,9 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(640, 168);
+            this.lblName.BackColor = System.Drawing.Color.Red;
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(648, 168);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(73, 13);
             this.lblName.TabIndex = 6;
@@ -106,7 +111,9 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(654, 229);
+            this.lblDescription.BackColor = System.Drawing.Color.Red;
+            this.lblDescription.ForeColor = System.Drawing.Color.White;
+            this.lblDescription.Location = new System.Drawing.Point(648, 229);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(60, 13);
             this.lblDescription.TabIndex = 7;
@@ -115,7 +122,9 @@
             // lblResources
             // 
             this.lblResources.AutoSize = true;
-            this.lblResources.Location = new System.Drawing.Point(656, 342);
+            this.lblResources.BackColor = System.Drawing.Color.Red;
+            this.lblResources.ForeColor = System.Drawing.Color.White;
+            this.lblResources.Location = new System.Drawing.Point(648, 342);
             this.lblResources.Name = "lblResources";
             this.lblResources.Size = new System.Drawing.Size(58, 13);
             this.lblResources.TabIndex = 8;
@@ -124,48 +133,55 @@
             // 
             // btnDeleteCoure
             // 
-            this.btnDeleteCoure.Location = new System.Drawing.Point(12, 366);
+            this.btnDeleteCoure.BackColor = System.Drawing.Color.Yellow;
+            this.btnDeleteCoure.Location = new System.Drawing.Point(26, 187);
             this.btnDeleteCoure.Name = "btnDeleteCoure";
             this.btnDeleteCoure.Size = new System.Drawing.Size(75, 41);
             this.btnDeleteCoure.TabIndex = 40;
             this.btnDeleteCoure.Text = "Delete Course";
-            this.btnDeleteCoure.UseVisualStyleBackColor = true;
+            this.btnDeleteCoure.UseVisualStyleBackColor = false;
             this.btnDeleteCoure.Click += new System.EventHandler(this.btnDeleteCoure_Click);
             // 
             // btnUpdateCourse
             // 
-            this.btnUpdateCourse.Location = new System.Drawing.Point(12, 289);
+            this.btnUpdateCourse.BackColor = System.Drawing.Color.Yellow;
+            this.btnUpdateCourse.Location = new System.Drawing.Point(26, 140);
             this.btnUpdateCourse.Name = "btnUpdateCourse";
             this.btnUpdateCourse.Size = new System.Drawing.Size(75, 41);
             this.btnUpdateCourse.TabIndex = 39;
             this.btnUpdateCourse.Text = "Update Course";
-            this.btnUpdateCourse.UseVisualStyleBackColor = true;
+            this.btnUpdateCourse.UseVisualStyleBackColor = false;
             this.btnUpdateCourse.Click += new System.EventHandler(this.btnUpdateCourse_Click);
             // 
             // btnAddCourse
             // 
-            this.btnAddCourse.Location = new System.Drawing.Point(12, 215);
+            this.btnAddCourse.BackColor = System.Drawing.Color.Yellow;
+            this.btnAddCourse.Location = new System.Drawing.Point(26, 93);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.Size = new System.Drawing.Size(75, 41);
             this.btnAddCourse.TabIndex = 38;
             this.btnAddCourse.Text = "Add new Course";
-            this.btnAddCourse.UseVisualStyleBackColor = true;
+            this.btnAddCourse.UseVisualStyleBackColor = false;
             this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(12, 140);
+            this.btnView.BackColor = System.Drawing.Color.Black;
+            this.btnView.ForeColor = System.Drawing.Color.White;
+            this.btnView.Location = new System.Drawing.Point(522, 41);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(75, 41);
+            this.btnView.Size = new System.Drawing.Size(116, 46);
             this.btnView.TabIndex = 37;
-            this.btnView.Text = "View Course";
-            this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Text = "Search";
+            this.btnView.UseVisualStyleBackColor = false;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(149, 67);
+            this.lblSearch.BackColor = System.Drawing.Color.Red;
+            this.lblSearch.ForeColor = System.Drawing.Color.White;
+            this.lblSearch.Location = new System.Drawing.Point(288, 31);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(107, 13);
             this.lblSearch.TabIndex = 44;
@@ -173,15 +189,18 @@
             // 
             // tbxSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(276, 60);
+            this.tbxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxSearch.Location = new System.Drawing.Point(120, 47);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(240, 20);
+            this.tbxSearch.Size = new System.Drawing.Size(396, 29);
             this.tbxSearch.TabIndex = 43;
             // 
             // frmModules
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Group_Project_PRG2782.Properties.Resources.patternpad;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1005, 498);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.tbxSearch);

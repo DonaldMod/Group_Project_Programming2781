@@ -39,6 +39,7 @@
             // 
             // lbxModules
             // 
+            this.lbxModules.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.lbxModules.FormattingEnabled = true;
             this.lbxModules.Location = new System.Drawing.Point(363, 53);
             this.lbxModules.Name = "lbxModules";
@@ -47,6 +48,7 @@
             // 
             // dgvSubjects
             // 
+            this.dgvSubjects.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
             this.dgvSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSubjects.Location = new System.Drawing.Point(12, 53);
             this.dgvSubjects.Name = "dgvSubjects";
@@ -56,28 +58,33 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.Yellow;
             this.btnAdd.Location = new System.Drawing.Point(12, 291);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(101, 23);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add Selected";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Black;
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(407, 297);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(101, 23);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblHead
             // 
             this.lblHead.AutoSize = true;
+            this.lblHead.BackColor = System.Drawing.Color.Red;
             this.lblHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHead.ForeColor = System.Drawing.Color.White;
             this.lblHead.Location = new System.Drawing.Point(26, 13);
             this.lblHead.Name = "lblHead";
             this.lblHead.Size = new System.Drawing.Size(140, 24);
@@ -88,6 +95,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Group_Project_PRG2782.Properties.Resources.patternpad;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(546, 366);
             this.Controls.Add(this.lblHead);
             this.Controls.Add(this.btnCancel);
