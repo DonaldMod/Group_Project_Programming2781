@@ -15,7 +15,6 @@ namespace Group_Project_PRG2782
     {
         SqlConnection Sqlcon;
         SqlCommand cmd;
-        SqlDataAdapter adapter;
         SqlDataReader reader;
         public BindingSource bs = new BindingSource();
 

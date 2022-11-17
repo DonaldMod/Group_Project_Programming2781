@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddSubjects));
             this.lbxModules = new System.Windows.Forms.ListBox();
             this.dgvSubjects = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblHead = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjects)).BeginInit();
@@ -64,23 +64,15 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnRemove
-            // 
-            this.btnRemove.Location = new System.Drawing.Point(136, 291);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(101, 23);
-            this.btnRemove.TabIndex = 3;
-            this.btnRemove.Text = "Remove Selected";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(12, 331);
+            this.btnCancel.Location = new System.Drawing.Point(407, 297);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(101, 23);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblHead
             // 
@@ -99,10 +91,10 @@
             this.ClientSize = new System.Drawing.Size(546, 366);
             this.Controls.Add(this.lblHead);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvSubjects);
             this.Controls.Add(this.lbxModules);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAddSubjects";
             this.Text = "frmAddSubjects";
             this.Load += new System.EventHandler(this.frmAddSubjects_Load);
@@ -117,7 +109,6 @@
         private System.Windows.Forms.ListBox lbxModules;
         private System.Windows.Forms.DataGridView dgvSubjects;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblHead;
     }
