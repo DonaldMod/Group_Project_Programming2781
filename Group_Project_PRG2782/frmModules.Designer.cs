@@ -37,7 +37,6 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblResources = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnDeleteCoure = new System.Windows.Forms.Button();
             this.btnUpdateCourse = new System.Windows.Forms.Button();
             this.btnAddCourse = new System.Windows.Forms.Button();
@@ -123,19 +122,9 @@
             this.lblResources.Text = "Resources";
             this.lblResources.Click += new System.EventHandler(this.label4_Click);
             // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(12, 388);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 41);
-            this.btnExit.TabIndex = 41;
-            this.btnExit.Text = "Return To Menu";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // btnDeleteCoure
             // 
-            this.btnDeleteCoure.Location = new System.Drawing.Point(12, 319);
+            this.btnDeleteCoure.Location = new System.Drawing.Point(12, 366);
             this.btnDeleteCoure.Name = "btnDeleteCoure";
             this.btnDeleteCoure.Size = new System.Drawing.Size(75, 41);
             this.btnDeleteCoure.TabIndex = 40;
@@ -145,7 +134,7 @@
             // 
             // btnUpdateCourse
             // 
-            this.btnUpdateCourse.Location = new System.Drawing.Point(12, 242);
+            this.btnUpdateCourse.Location = new System.Drawing.Point(12, 289);
             this.btnUpdateCourse.Name = "btnUpdateCourse";
             this.btnUpdateCourse.Size = new System.Drawing.Size(75, 41);
             this.btnUpdateCourse.TabIndex = 39;
@@ -155,7 +144,7 @@
             // 
             // btnAddCourse
             // 
-            this.btnAddCourse.Location = new System.Drawing.Point(12, 168);
+            this.btnAddCourse.Location = new System.Drawing.Point(12, 215);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.Size = new System.Drawing.Size(75, 41);
             this.btnAddCourse.TabIndex = 38;
@@ -165,7 +154,7 @@
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(12, 93);
+            this.btnView.Location = new System.Drawing.Point(12, 140);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(75, 41);
             this.btnView.TabIndex = 37;
@@ -196,7 +185,6 @@
             this.ClientSize = new System.Drawing.Size(1005, 498);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.tbxSearch);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDeleteCoure);
             this.Controls.Add(this.btnUpdateCourse);
             this.Controls.Add(this.btnAddCourse);
@@ -210,6 +198,7 @@
             this.Controls.Add(this.txbxName);
             this.Controls.Add(this.txbxCode);
             this.Controls.Add(this.dgvModules);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmModules";
             this.Text = "frmModules";
             this.Load += new System.EventHandler(this.frmModules_Load);
@@ -230,7 +219,6 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblResources;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDeleteCoure;
         private System.Windows.Forms.Button btnUpdateCourse;
         private System.Windows.Forms.Button btnAddCourse;

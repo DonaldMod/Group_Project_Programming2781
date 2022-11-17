@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnViewCourse = new System.Windows.Forms.Button();
             this.btnViewStudent = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnUpdateStudent = new System.Windows.Forms.Button();
@@ -47,7 +46,6 @@
             this.lblImage = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblStudentNmbr = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.dgvOne = new System.Windows.Forms.DataGridView();
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblHeader = new System.Windows.Forms.Label();
@@ -64,15 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnViewCourse
-            // 
-            this.btnViewCourse.Location = new System.Drawing.Point(12, 77);
-            this.btnViewCourse.Name = "btnViewCourse";
-            this.btnViewCourse.Size = new System.Drawing.Size(75, 41);
-            this.btnViewCourse.TabIndex = 0;
-            this.btnViewCourse.Text = "View Course Details";
-            this.btnViewCourse.UseVisualStyleBackColor = true;
             // 
             // btnViewStudent
             // 
@@ -242,16 +231,6 @@
             this.lblStudentNmbr.TabIndex = 21;
             this.lblStudentNmbr.Text = "Student Number";
             // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(12, 483);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 41);
-            this.btnExit.TabIndex = 35;
-            this.btnExit.Text = "Return To Menu";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // dgvOne
             // 
             this.dgvOne.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -377,7 +356,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 557);
+            this.ClientSize = new System.Drawing.Size(1131, 557);
             this.Controls.Add(this.pbxImage);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAddSubjects);
@@ -390,7 +369,6 @@
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.dgvOne);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txbxAddress);
             this.Controls.Add(this.txbxPhone);
             this.Controls.Add(this.txbxNumber);
@@ -409,7 +387,7 @@
             this.Controls.Add(this.btnUpdateStudent);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.btnViewStudent);
-            this.Controls.Add(this.btnViewCourse);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStudents";
             this.Text = "frmStudents";
             this.Load += new System.EventHandler(this.frmStudents_Load);
@@ -421,8 +399,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnViewCourse;
         private System.Windows.Forms.Button btnViewStudent;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnUpdateStudent;
@@ -441,7 +417,6 @@
         private System.Windows.Forms.Label lblImage;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblStudentNmbr;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridView dgvOne;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Label lblHeader;

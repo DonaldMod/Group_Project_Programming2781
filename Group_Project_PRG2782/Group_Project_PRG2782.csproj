@@ -61,7 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddStudentsCRUD.cs" />
     <Compile Include="Create_Account.cs">
       <SubType>Form</SubType>
     </Compile>
