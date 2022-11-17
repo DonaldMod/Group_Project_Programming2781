@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnViewCourse = new System.Windows.Forms.Button();
             this.btnViewStudent = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnUpdateStudent = new System.Windows.Forms.Button();
@@ -47,7 +46,6 @@
             this.lblImage = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblStudentNmbr = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.dgvOne = new System.Windows.Forms.DataGridView();
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblHeader = new System.Windows.Forms.Label();
@@ -65,19 +63,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnViewCourse
-            // 
-            this.btnViewCourse.BackColor = System.Drawing.Color.Yellow;
-            this.btnViewCourse.Location = new System.Drawing.Point(12, 77);
-            this.btnViewCourse.Name = "btnViewCourse";
-            this.btnViewCourse.Size = new System.Drawing.Size(75, 41);
-            this.btnViewCourse.TabIndex = 0;
-            this.btnViewCourse.Text = "View Course Details";
-            this.btnViewCourse.UseVisualStyleBackColor = false;
-            // 
             // btnViewStudent
             // 
-            this.btnViewStudent.BackColor = System.Drawing.Color.Yellow;
+            this.btnViewStudent.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewStudent.ForeColor = System.Drawing.Color.Yellow;
             this.btnViewStudent.Location = new System.Drawing.Point(12, 143);
             this.btnViewStudent.Name = "btnViewStudent";
             this.btnViewStudent.Size = new System.Drawing.Size(75, 41);
@@ -87,7 +77,9 @@
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.BackColor = System.Drawing.Color.Yellow;
+            this.btnAddStudent.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStudent.ForeColor = System.Drawing.Color.Yellow;
             this.btnAddStudent.Location = new System.Drawing.Point(12, 209);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(75, 41);
@@ -98,7 +90,9 @@
             // 
             // btnUpdateStudent
             // 
-            this.btnUpdateStudent.BackColor = System.Drawing.Color.Yellow;
+            this.btnUpdateStudent.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUpdateStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateStudent.ForeColor = System.Drawing.Color.Yellow;
             this.btnUpdateStudent.Location = new System.Drawing.Point(12, 279);
             this.btnUpdateStudent.Name = "btnUpdateStudent";
             this.btnUpdateStudent.Size = new System.Drawing.Size(75, 41);
@@ -109,7 +103,9 @@
             // 
             // btnDeleteStudent
             // 
-            this.btnDeleteStudent.BackColor = System.Drawing.Color.Yellow;
+            this.btnDeleteStudent.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteStudent.ForeColor = System.Drawing.Color.Yellow;
             this.btnDeleteStudent.Location = new System.Drawing.Point(12, 348);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(75, 41);
@@ -121,6 +117,7 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Black;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(635, 38);
             this.btnSearch.Name = "btnSearch";
@@ -266,17 +263,6 @@
             this.lblStudentNmbr.TabIndex = 21;
             this.lblStudentNmbr.Text = "Student Number";
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Yellow;
-            this.btnExit.Location = new System.Drawing.Point(12, 414);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 41);
-            this.btnExit.TabIndex = 35;
-            this.btnExit.Text = "Return To Menu";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // dgvOne
             // 
             this.dgvOne.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
@@ -289,6 +275,7 @@
             this.dgvOne.Size = new System.Drawing.Size(669, 446);
             this.dgvOne.TabIndex = 36;
             this.dgvOne.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOne_CellContentClick);
+            this.dgvOne.SelectionChanged += new System.EventHandler(this.dgvOne_SelectionChanged);
             // 
             // lblSearch
             // 
@@ -343,6 +330,7 @@
             // tbnBrowse
             // 
             this.tbnBrowse.BackColor = System.Drawing.Color.Black;
+            this.tbnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tbnBrowse.ForeColor = System.Drawing.Color.White;
             this.tbnBrowse.Location = new System.Drawing.Point(1009, 227);
             this.tbnBrowse.Name = "tbnBrowse";
@@ -381,6 +369,7 @@
             // btnAddSubjects
             // 
             this.btnAddSubjects.BackColor = System.Drawing.Color.Black;
+            this.btnAddSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddSubjects.ForeColor = System.Drawing.Color.White;
             this.btnAddSubjects.Location = new System.Drawing.Point(1025, 520);
             this.btnAddSubjects.Name = "btnAddSubjects";
@@ -393,6 +382,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.Black;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(784, 520);
             this.btnClear.Name = "btnClear";
@@ -400,6 +390,7 @@
             this.btnClear.TabIndex = 47;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // pbxImage
             // 
@@ -430,7 +421,6 @@
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.dgvOne);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txbxAddress);
             this.Controls.Add(this.txbxPhone);
             this.Controls.Add(this.txbxNumber);
@@ -449,7 +439,7 @@
             this.Controls.Add(this.btnUpdateStudent);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.btnViewStudent);
-            this.Controls.Add(this.btnViewCourse);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStudents";
             this.Text = "frmStudents";
             this.Load += new System.EventHandler(this.frmStudents_Load);
@@ -461,8 +451,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnViewCourse;
         private System.Windows.Forms.Button btnViewStudent;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnUpdateStudent;
@@ -481,7 +469,6 @@
         private System.Windows.Forms.Label lblImage;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblStudentNmbr;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridView dgvOne;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Label lblHeader;

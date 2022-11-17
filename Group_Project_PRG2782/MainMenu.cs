@@ -62,7 +62,6 @@ namespace Group_Project_PRG2782
 
             btnModules.BackColor = Color.Red;
 
-            btnStudents.BackColor = Color.Red;
 
 
         }

@@ -120,6 +120,14 @@ namespace Group_Project_PRG2782
             loaddgv();
         }
 
+        private void dgvModules_SelectionChanged(object sender, EventArgs e)
+        {
+            txbxCode.Text = dgvModules.CurrentRow.Cells[0].Value.ToString();
+            txbxName.Text = dgvModules.CurrentRow.Cells[1].Value.ToString();
+            rtxDescription.Text = dgvModules.CurrentRow.Cells[2].Value.ToString();
+            rtbResources.Text = dgvModules.CurrentRow.Cells[3].Value.ToString();
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             MainMenu main = new MainMenu();

@@ -137,5 +137,36 @@ namespace Group_Project_PRG2782
             data.bs.DataSource = data.DisplayStudents();
             dgvOne.DataSource = data.bs;
         }
+
+        private void dgvOne_SelectionChanged(object sender, EventArgs e)
+        {
+            txbxNumber.Text = dgvOne.CurrentRow.Cells[0].Value.ToString();
+            txbxName.Text = dgvOne.CurrentRow.Cells[1].Value.ToString();
+            txbxSurname.Text = dgvOne.CurrentRow.Cells[2].Value.ToString();
+            byte[] image = (byte[])(dgvOne.CurrentRow.Cells[3].Value);
+            MemoryStream ms = new MemoryStream(image);
+            pbxImage.Image = Image.FromStream(ms);
+            cbxGender.Text = dgvOne.CurrentRow.Cells[4].Value.ToString();
+            txbxPhone.Text = dgvOne.CurrentRow.Cells[5].Value.ToString();
+            txbxAddress.Text = dgvOne.CurrentRow.Cells[6].Value.ToString();
+            string[] modules = dgvOne.CurrentRow.Cells[7].Value.ToString().Split(',');
+            foreach (var item in modules)
+            {
+                lbxModules.Items.Add(item);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txbxAddress.Clear();
+            txbxName.Clear();
+            txbxSurname.Clear();
+            txbxNumber.Clear();
+            txbxPhone.Clear();
+            cbxGender.ResetText();
+            pbxImage.Image.Dispose();
+            lbxModules.Items.Clear();
+            tbxSearch.Clear();
+        }
     }
 }

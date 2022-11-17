@@ -58,7 +58,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Yellow;
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.Yellow;
             this.btnAdd.Location = new System.Drawing.Point(12, 291);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(101, 23);
@@ -70,6 +72,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Black;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(407, 297);
             this.btnCancel.Name = "btnCancel";

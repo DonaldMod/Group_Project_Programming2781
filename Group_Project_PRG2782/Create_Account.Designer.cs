@@ -78,11 +78,13 @@
             // 
             // btnCreateAccount
             // 
-            this.btnCreateAccount.BackColor = System.Drawing.Color.Yellow;
-            this.btnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateAccount.Location = new System.Drawing.Point(252, 233);
+            this.btnCreateAccount.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateAccount.ForeColor = System.Drawing.Color.Yellow;
+            this.btnCreateAccount.Location = new System.Drawing.Point(207, 233);
             this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(96, 50);
+            this.btnCreateAccount.Size = new System.Drawing.Size(163, 50);
             this.btnCreateAccount.TabIndex = 8;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
@@ -91,6 +93,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Maroon;
             this.btnLogin.Location = new System.Drawing.Point(419, 12);
